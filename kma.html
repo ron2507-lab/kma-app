@@ -1,0 +1,2062 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KMA — Käppler Mail Archiv</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNWI2ZWY1Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I2E3OGJmYSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic2hpbmUiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojZmZmZmZmO3N0b3Atb3BhY2l0eTowLjMiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojZmZmZmZmO3N0b3Atb3BhY2l0eTowIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8IS0tIEJhY2tncm91bmQgcm91bmRlZCByZWN0IC0tPgogIDxyZWN0IHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiByeD0iMTEwIiBmaWxsPSJ1cmwoI2JnKSIvPgogIDxyZWN0IHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiByeD0iMTEwIiBmaWxsPSJ1cmwoI3NoaW5lKSIvPgogIDwhLS0gRW52ZWxvcGUgYm9keSAtLT4KICA8cmVjdCB4PSI4MCIgeT0iMTYwIiB3aWR0aD0iMzUyIiBoZWlnaHQ9IjI0MCIgcng9IjI0IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC45NSIvPgogIDwhLS0gRW52ZWxvcGUgZmxhcCAoViBzaGFwZSkgLS0+CiAgPHBhdGggZD0iTTgwIDE2MCBMMjU2IDI5MCBMNDMyIDE2MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyMCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgb3BhY2l0eT0iMC41Ii8+CiAgPCEtLSBLIE0gQSBsZXR0ZXJzIC0tPgogIDx0ZXh0IHg9IjI1NiIgeT0iMzQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iODAwIiBmb250LXNpemU9IjkwIiBmaWxsPSIjNWI2ZWY1IiBsZXR0ZXItc3BhY2luZz0iLTIiPktNQTwvdGV4dD4KICA8IS0tIFNwYXJrbGUgdG9wIHJpZ2h0IC0tPgogIDxjaXJjbGUgY3g9IjQwMCIgY3k9IjEwMCIgcj0iMTIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjYiLz4KICA8Y2lyY2xlIGN4PSI0MzAiIGN5PSI3NSIgcj0iNyIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuNCIvPgogIDxjaXJjbGUgY3g9IjM3MCIgY3k9IjgwIiByPSI1IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC40Ii8+Cjwvc3ZnPg==">
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNWI2ZWY1Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I2E3OGJmYSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic2hpbmUiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojZmZmZmZmO3N0b3Atb3BhY2l0eTowLjMiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojZmZmZmZmO3N0b3Atb3BhY2l0eTowIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8IS0tIEJhY2tncm91bmQgcm91bmRlZCByZWN0IC0tPgogIDxyZWN0IHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiByeD0iMTEwIiBmaWxsPSJ1cmwoI2JnKSIvPgogIDxyZWN0IHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiByeD0iMTEwIiBmaWxsPSJ1cmwoI3NoaW5lKSIvPgogIDwhLS0gRW52ZWxvcGUgYm9keSAtLT4KICA8cmVjdCB4PSI4MCIgeT0iMTYwIiB3aWR0aD0iMzUyIiBoZWlnaHQ9IjI0MCIgcng9IjI0IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC45NSIvPgogIDwhLS0gRW52ZWxvcGUgZmxhcCAoViBzaGFwZSkgLS0+CiAgPHBhdGggZD0iTTgwIDE2MCBMMjU2IDI5MCBMNDMyIDE2MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyMCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgb3BhY2l0eT0iMC41Ii8+CiAgPCEtLSBLIE0gQSBsZXR0ZXJzIC0tPgogIDx0ZXh0IHg9IjI1NiIgeT0iMzQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iJ0hlbHZldGljYSBOZXVlJyxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iODAwIiBmb250LXNpemU9IjkwIiBmaWxsPSIjNWI2ZWY1IiBsZXR0ZXItc3BhY2luZz0iLTIiPktNQTwvdGV4dD4KICA8IS0tIFNwYXJrbGUgdG9wIHJpZ2h0IC0tPgogIDxjaXJjbGUgY3g9IjQwMCIgY3k9IjEwMCIgcj0iMTIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjYiLz4KICA8Y2lyY2xlIGN4PSI0MzAiIGN5PSI3NSIgcj0iNyIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuNCIvPgogIDxjaXJjbGUgY3g9IjM3MCIgY3k9IjgwIiByPSI1IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC40Ii8+Cjwvc3ZnPg==">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="KMA">
+<meta name="theme-color" content="#0d9488">
+<meta name="description" content="Käppler Mail Archiv — M365 E-Mails auf OneDrive archivieren">
+<script src="https://unpkg.com/@azure/msal-browser@3.10.0/lib/msal-browser.min.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap');
+  :root{--bg:#0a0f0f;--surface:#111a1a;--surface2:#182020;--border:#1e3030;--accent:#0d9488;--accent2:#34d399;--success:#34d399;--warn:#fbbf24;--danger:#f87171;--text:#e8e8f0;--muted:#4d7070;--mono:'DM Mono',monospace;--sans:'Syne',sans-serif;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:100vh;overflow-x:hidden;}
+  body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(13,148,136,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(13,148,136,.04) 1px,transparent 1px);background-size:40px 40px;pointer-events:none;z-index:0;}
+  .app{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:2rem;}
+  header{display:flex;align-items:center;justify-content:space-between;margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border);}
+  .logo{display:flex;align-items:center;gap:.75rem;}
+  .logo-icon{width:40px;height:40px;background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;}
+  .logo h1{font-size:1.4rem;font-weight:800;letter-spacing:-.02em;}
+  .logo span{color:var(--accent);}
+  .accounts-row{display:flex;gap:.75rem;flex-wrap:wrap;}
+  .status-badge{display:flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.72rem;color:var(--muted);background:var(--surface);border:1px solid var(--border);padding:.4rem .9rem;border-radius:20px;}
+  .badge-label{font-size:.6rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-right:.2rem;}
+  .status-dot{width:7px;height:7px;border-radius:50%;background:var(--muted);transition:background .3s;flex-shrink:0;}
+  .status-dot.connected{background:var(--success);box-shadow:0 0 8px var(--success);}
+  .panels-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:2rem;}
+  .config-panel{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:1.75rem;animation:fadeUp .4s ease;}
+  .config-panel h2{font-size:.65rem;font-family:var(--mono);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.25rem;}
+  .h2-mail{color:var(--accent);}
+  .h2-drive{color:var(--accent2);}
+  .config-panel.drive-panel{border-color:rgba(52,211,153,.3);}
+  .config-grid{display:grid;grid-template-columns:1fr;gap:.85rem;}
+  .field{display:flex;flex-direction:column;gap:.35rem;}
+  .field label{font-family:var(--mono);font-size:.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;}
+  .field input,.field select{background:var(--surface2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:var(--mono);font-size:.82rem;padding:.6rem .85rem;outline:none;transition:border-color .2s;width:100%;}
+  .field input:focus,.field select:focus{border-color:var(--accent);}
+  .field select option{background:var(--surface2);}
+  .btn{font-family:var(--sans);font-weight:700;font-size:.82rem;border:none;border-radius:8px;padding:.65rem 1.3rem;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:.5rem;}
+  .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:white;}
+  .btn-primary:hover{transform:translateY(-1px);box-shadow:0 4px 20px rgba(13,148,136,.4);}
+  .btn-primary:disabled{opacity:.4;cursor:not-allowed;transform:none;}
+  .btn-drive{background:linear-gradient(135deg,var(--accent),var(--accent2));color:white;}
+  .btn-drive:hover{transform:translateY(-1px);box-shadow:0 4px 20px rgba(52,211,153,.4);}
+  .btn-drive:disabled{opacity:.4;cursor:not-allowed;transform:none;}
+  .btn-diag{background:linear-gradient(135deg,var(--accent),var(--accent2));color:white;}
+  .btn-diag:hover{transform:translateY(-1px);box-shadow:0 4px 20px rgba(13,148,136,.4);}
+  .btn-diag:disabled{opacity:.4;cursor:not-allowed;transform:none;}
+  .btn-ghost{background:transparent;color:var(--muted);border:1px solid var(--border);}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+  .btn-danger{background:rgba(248,113,113,.1);color:var(--danger);border:1px solid rgba(248,113,113,.3);}
+  .btn-sm{font-size:.7rem;padding:.35rem .8rem;}
+  .actions-row{display:flex;gap:.6rem;margin-top:1.25rem;flex-wrap:wrap;align-items:center;}
+  .path-input-wrap{display:flex;align-items:center;gap:.4rem;}
+  .path-input-wrap input{flex:1;}
+  .progress-wrap{background:var(--surface2);border-radius:4px;height:4px;overflow:hidden;margin-top:.75rem;}
+  .progress-bar{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:4px;transition:width .4s ease;width:0%;}
+  .stats-row{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-bottom:2rem;}
+  .stat-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.1rem;animation:fadeUp .4s ease;}
+  .stat-label{font-family:var(--mono);font-size:.62rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:.4rem;}
+  .stat-value{font-size:1.6rem;font-weight:800;background:linear-gradient(135deg,var(--text),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+  .stat-value.small{font-size:.85rem;padding-top:.4rem;}
+  /* Diagnose Panel */
+  .diag-panel{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;margin-bottom:2rem;animation:fadeUp .4s ease;transition:border-color .3s,background .3s;}
+  .diag-panel.all-ok{border-color:rgba(52,211,153,.4);background:linear-gradient(135deg,rgba(13,148,136,.06),rgba(52,211,153,.03));}
+  .diag-header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem;cursor:pointer;gap:.75rem;flex-wrap:wrap;}
+  .diag-header:hover{background:rgba(255,255,255,.02);}
+  .diag-title-row{display:flex;align-items:center;gap:.75rem;flex:1;flex-wrap:wrap;}
+  .diag-title{font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.15em;color:var(--accent);}
+  .diag-overall{font-family:var(--mono);font-size:.75rem;}
+  .diag-overall.ok{color:var(--success);}
+  .diag-overall.fail{color:var(--danger);}
+  .diag-overall.warn{color:var(--warn);}
+  .diag-overall.idle{color:var(--muted);}
+  .diag-chevron{font-size:.75rem;color:var(--muted);transition:transform .25s;flex-shrink:0;}
+  .diag-chevron.open{transform:rotate(180deg);}
+  .diag-body{display:none;border-top:1px solid var(--border);}
+  .diag-body.open{display:block;}
+  .diag-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.75rem;padding:1.25rem 1.5rem;}
+  .diag-item{background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:.9rem 1rem;display:flex;align-items:flex-start;gap:.75rem;}
+  .diag-icon{font-size:1.2rem;flex-shrink:0;margin-top:.1rem;}
+  .diag-name{font-size:.8rem;font-weight:700;margin-bottom:.2rem;}
+  .diag-desc{font-family:var(--mono);font-size:.68rem;color:var(--muted);line-height:1.5;}
+  .diag-status{font-family:var(--mono);font-size:.7rem;margin-top:.35rem;padding:.2rem .5rem;border-radius:4px;display:inline-block;}
+  .diag-status.ok{background:rgba(52,211,153,.15);color:var(--success);}
+  .diag-status.fail{background:rgba(248,113,113,.15);color:var(--danger);}
+  .diag-status.warn{background:rgba(251,191,36,.15);color:var(--warn);}
+  .diag-status.running{background:rgba(13,148,136,.15);color:var(--accent);}
+  .diag-status.idle{background:rgba(107,107,138,.15);color:var(--muted);}
+  .diag-summary{padding:.75rem 1.5rem 1.25rem;font-family:var(--mono);font-size:.75rem;color:var(--muted);border-top:1px solid var(--border);display:none;}
+  .diag-summary.visible{display:block;}
+  .diag-dots{display:flex;gap:.3rem;align-items:center;}
+  .diag-dot{width:8px;height:8px;border-radius:50%;background:var(--muted);transition:background .3s;}
+  .diag-dot.ok{background:var(--success);}
+  .diag-dot.fail{background:var(--danger);}
+  .diag-dot.warn{background:var(--warn);}
+  .diag-dot.running{background:var(--accent);animation:diagpulse .8s infinite;}
+  @keyframes diagpulse{0%,100%{opacity:1;}50%{opacity:.4;}}
+  .folder-panel{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;margin-bottom:2rem;animation:fadeUp .4s ease;display:none;}
+  .folder-panel.visible{display:block;}
+  .folder-header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem;border-bottom:1px solid var(--border);flex-wrap:wrap;gap:.5rem;}
+  .folder-title{font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.15em;color:var(--accent);}
+  .folder-actions{display:flex;gap:.5rem;}
+  .folder-grid{padding:1rem 1.5rem;}
+  /* Tree view */
+  .tree-group{margin-bottom:.5rem;}
+  .tree-parent{display:flex;align-items:center;gap:.75rem;padding:.6rem .75rem;border:1px solid var(--border);border-radius:8px;cursor:pointer;transition:all .15s;user-select:none;background:var(--surface2);}
+  .tree-parent:hover{border-color:var(--accent);}
+  .tree-parent.selected{border-color:var(--accent);background:rgba(13,148,136,.12);}
+  .tree-parent.has-children{border-radius:8px 8px 0 0;}
+  .tree-toggle{font-size:.75rem;color:var(--muted);width:16px;text-align:center;flex-shrink:0;transition:transform .2s;}
+  .tree-toggle.open{transform:rotate(90deg);}
+  .tree-children{border:1px solid var(--border);border-top:none;border-radius:0 0 8px 8px;overflow:hidden;display:none;}
+  .tree-children.open{display:block;}
+  .tree-child{display:flex;align-items:center;gap:.75rem;padding:.55rem .75rem .55rem 2.5rem;border-bottom:1px solid var(--border);cursor:pointer;transition:all .15s;user-select:none;}
+  .tree-child:last-child{border-bottom:none;}
+  .tree-child:hover{background:var(--surface2);}
+  .tree-child.selected{background:rgba(13,148,136,.08);}
+  .folder-checkbox{width:15px;height:15px;border:2px solid var(--border);border-radius:4px;display:flex;align-items:center;justify-content:center;transition:all .15s;flex-shrink:0;font-size:.55rem;cursor:pointer;}
+  .folder-checkbox:hover{border-color:var(--accent);background:rgba(13,148,136,.15);}
+  .selected .folder-checkbox{background:var(--accent);border-color:var(--accent);color:white;}
+  .folder-info{flex:1;min-width:0;}
+  .folder-name{font-size:.82rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .folder-name-full{font-size:.82rem;font-weight:600;word-break:break-word;}
+  .folder-count{font-family:var(--mono);font-size:.62rem;color:var(--muted);margin-top:.1rem;}
+  .folder-icon{font-size:.95rem;flex-shrink:0;}
+  .folder-total{font-family:var(--mono);font-size:.65rem;color:var(--muted);margin-left:auto;flex-shrink:0;padding-left:.5rem;}
+  .log-panel{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;margin-bottom:2rem;animation:fadeUp .4s ease;}
+  .log-header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem;border-bottom:1px solid var(--border);}
+  .log-title{font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.15em;color:var(--accent);}
+  .log-body{padding:1rem 1.5rem;max-height:200px;overflow-y:auto;font-family:var(--mono);font-size:.76rem;line-height:1.8;}
+  .log-body::-webkit-scrollbar{width:4px;}
+  .log-body::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px;}
+  .log-line{display:flex;gap:1rem;}
+  .log-time{color:var(--muted);min-width:75px;}
+  .log-msg{color:var(--text);}
+  .log-msg.success{color:var(--success);}
+  .log-msg.warn{color:var(--warn);}
+  .log-msg.error{color:var(--danger);}
+  .log-msg.info{color:var(--accent);}
+  .mail-panel{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;animation:fadeUp .5s ease;}
+  .mail-header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem;border-bottom:1px solid var(--border);gap:1rem;flex-wrap:wrap;}
+  .mail-title{font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.15em;color:var(--accent);}
+  .search-wrap{display:flex;align-items:center;gap:.5rem;background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:.4rem .8rem;flex:1;max-width:300px;}
+  .search-wrap input{background:none;border:none;outline:none;color:var(--text);font-family:var(--mono);font-size:.78rem;width:100%;}
+  .mail-list{max-height:380px;overflow-y:auto;}
+  .mail-list::-webkit-scrollbar{width:4px;}
+  .mail-list::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px;}
+  .mail-item{display:grid;grid-template-columns:2fr 3fr 1fr 95px;gap:1rem;padding:.85rem 1.5rem;border-bottom:1px solid var(--border);align-items:center;transition:background .15s;}
+  .mail-item:last-child{border-bottom:none;}
+  .mail-from{font-size:.78rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .mail-subject{font-size:.78rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .mail-date{font-family:var(--mono);font-size:.68rem;color:var(--muted);text-align:right;}
+  .mail-tag{font-family:var(--mono);font-size:.62rem;padding:.2rem .55rem;border-radius:20px;text-align:center;}
+  .tag-archived{background:rgba(52,211,153,.15);color:var(--success);}
+  .tag-pending{background:rgba(251,191,36,.15);color:var(--warn);}
+  .empty-state{text-align:center;padding:2.5rem;color:var(--muted);font-family:var(--mono);font-size:.78rem;}
+  @keyframes spin{to{transform:rotate(360deg);}}
+  .spinner{width:13px;height:13px;border:2px solid rgba(255,255,255,.2);border-top-color:white;border-radius:50%;animation:spin .6s linear infinite;display:none;}
+  .spinning .spinner{display:block;}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+  .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(4px);z-index:100;display:none;align-items:center;justify-content:center;}
+  .modal-overlay.open{display:flex;}
+  .modal{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:2rem;max-width:500px;width:90%;animation:fadeUp .3s ease;}
+  .modal h3{font-size:1.1rem;margin-bottom:.5rem;}
+  .modal p{color:var(--muted);font-size:.83rem;line-height:1.6;margin-bottom:1.25rem;}
+  .modal code{display:block;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:1rem;font-family:var(--mono);font-size:.73rem;color:var(--accent2);margin-bottom:1rem;white-space:pre-wrap;word-break:break-all;}
+  .drive-browser{background:var(--bg);border:1px solid var(--border);border-radius:8px;max-height:220px;overflow-y:auto;margin-bottom:1rem;}
+  .drive-browser::-webkit-scrollbar{width:4px;}
+  .drive-browser::-webkit-scrollbar-thumb{background:var(--border);}
+  .drive-item{display:flex;align-items:center;gap:.65rem;padding:.6rem 1rem;border-bottom:1px solid var(--border);cursor:pointer;transition:background .15s;font-size:.8rem;}
+  .drive-item:hover{background:var(--surface2);}
+  .drive-item:last-child{border-bottom:none;}
+  .drive-item.drive-up{color:var(--accent2);}
+  .drive-item.drive-selected{background:rgba(52,211,153,.1);border-left:2px solid var(--accent2);}
+  .drive-breadcrumb{padding:.6rem 1rem;font-family:var(--mono);font-size:.7rem;color:var(--muted);border-bottom:1px solid var(--border);background:var(--surface);}
+  @media(max-width:800px){.panels-row{grid-template-columns:1fr;}.stats-row{grid-template-columns:repeat(2,1fr);}.mail-item{grid-template-columns:1fr 1fr;}.mail-subject{display:none;}.folder-grid{grid-template-columns:1fr 1fr;}.diag-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div class="logo">
+      <div class="logo-icon">📬</div>
+      <h1>K<span>MA</span></h1>
+    </div>
+    <div class="accounts-row">
+      <div class="status-badge"><span class="badge-label">Mail</span><div class="status-dot" id="dotMail"></div><span id="txtMail">Nicht verbunden</span></div>
+      <div class="status-badge"><span class="badge-label">OneDrive</span><div class="status-dot" id="dotDrive"></div><span id="txtDrive">Nicht verbunden</span></div>
+    </div>
+  </header>
+
+  <!-- Client ID Panel — collapsible -->
+  <div class="config-panel" id="clientIdPanel" style="margin-bottom:1rem">
+    <div style="display:flex;align-items:center;justify-content:space-between;cursor:pointer" onclick="toggleClientIdPanel()">
+      <h2 style="margin-bottom:0"><span class="h2-mail">// Azure App Client ID</span>
+        <span style="color:var(--success);font-size:.65rem;margin-left:.75rem;font-weight:400" id="clientIdStatus"></span>
+      </h2>
+      <span id="clientIdChevron" style="font-size:.75rem;color:var(--muted);transition:transform .25s">▼</span>
+    </div>
+    <div id="clientIdBody" style="display:none;margin-top:1.25rem">
+      <div class="field" style="margin-bottom:.75rem">
+        <label>Client ID <span style="color:var(--muted);font-weight:normal;text-transform:none;letter-spacing:0">(gilt für Postfach und OneDrive)</span></label>
+        <input type="text" id="clientId" placeholder="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" oninput="syncClientId()"/>
+        <input type="hidden" id="driveClientId"/>
+      </div>
+      <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+        <button class="btn btn-ghost btn-sm" onclick="openWizard()">🔑 Aus Datei laden</button>
+        <button class="btn btn-ghost btn-sm" onclick="downloadConfigTemplate()">⬇ Als Datei speichern</button>
+        <button class="btn btn-ghost btn-sm" onclick="showSetupModal()">⚙ Setup-Anleitung</button>
+      </div>
+      <span style="font-family:var(--mono);font-size:.6rem;color:var(--muted);display:block;margin-top:.5rem" id="mailIdSaved"></span>
+      <span style="display:none" id="driveIdSaved"></span>
+    </div>
+  </div>
+
+  <div class="panels-row">
+    <div class="config-panel">
+      <h2><span class="h2-mail">// Postfach (M365)</span></h2>
+      <div class="config-grid">
+        <div class="field"><label>Mails archivieren älter als</label><select id="ageDays"><option value="0">Alle Mails (kein Filter)</option><option value="30">30 Tage</option><option value="60">60 Tage</option><option value="90" selected>90 Tage</option><option value="180">6 Monate</option><option value="365">1 Jahr</option></select></div>
+        <div class="field"><label>Max. Mails pro Durchlauf</label><select id="batchSize"><option value="50">50</option><option value="100">100</option><option value="250">250</option><option value="500">500</option><option value="0" selected>Alle (automatisch)</option></select></div>
+        <div class="field"><label>Auto-Archivierung</label><select id="autoInterval"><option value="0">Aus (manuell)</option><option value="30">Alle 30 Minuten</option><option value="60">Stündlich</option><option value="360">Alle 6 Stunden</option></select></div>
+        <div class="field" style="flex-direction:row;align-items:center;gap:.75rem;margin-top:.25rem">
+          <input type="checkbox" id="deleteAfterArchive" checked style="width:16px;height:16px;accent-color:var(--accent);cursor:pointer"/>
+          <label for="deleteAfterArchive" style="text-transform:none;letter-spacing:0;font-size:.8rem;cursor:pointer;color:var(--text)">Mails nach Archivierung löschen</label>
+        </div>
+        <div class="field" style="flex-direction:row;align-items:center;gap:.75rem">
+          <input type="checkbox" id="saveHtml" checked style="width:16px;height:16px;accent-color:var(--accent);cursor:pointer"/>
+          <label for="saveHtml" style="text-transform:none;letter-spacing:0;font-size:.8rem;cursor:pointer;color:var(--text)">HTML-Version speichern</label>
+        </div>
+        <div class="field" style="flex-direction:row;align-items:center;gap:.75rem">
+          <input type="checkbox" id="saveAttachments" checked style="width:16px;height:16px;accent-color:var(--accent);cursor:pointer"/>
+          <label for="saveAttachments" style="text-transform:none;letter-spacing:0;font-size:.8rem;cursor:pointer;color:var(--text)">Anhänge separat speichern</label>
+        </div>
+      </div>
+      <div class="actions-row">
+        <button class="btn btn-primary" id="btnConnectMail" onclick="connectMail()"><div class="spinner"></div><span>Mit Postfach verbinden</span></button>
+        <button class="btn btn-danger btn-sm" id="btnDisconnectMail" style="display:none" onclick="disconnectMail()">Abmelden</button>
+      </div>
+    </div>
+    <div class="config-panel drive-panel">
+      <h2><span class="h2-drive">// OneDrive (Zielkonto)</span></h2>
+      <div class="config-grid">
+        <div class="field">
+          <label>Zielordner in OneDrive</label>
+          <div class="path-input-wrap">
+            <input type="text" id="folderName" value="MailArchiv" placeholder="z.B. Archiv/Mails"/>
+            <button class="btn btn-ghost btn-sm" id="btnBrowse" onclick="openFolderBrowser()" disabled title="Ordner durchsuchen">📂</button>
+          </div>
+          <span style="font-family:var(--mono);font-size:.65rem;color:var(--muted);margin-top:.3rem">Pfade mit / möglich: Archiv/Mails/2024</span>
+        </div>
+      </div>
+      <div class="actions-row">
+        <button class="btn btn-drive" id="btnConnectDrive" onclick="connectDrive()"><div class="spinner"></div><span>Mit OneDrive verbinden</span></button>
+        <button class="btn btn-danger btn-sm" id="btnDisconnectDrive" style="display:none" onclick="disconnectDrive()">Abmelden</button>
+      </div>
+      <!-- Rich Progress Panel -->
+      <div id="progressWrap" style="display:none;margin-top:1.25rem">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem;flex-wrap:wrap;gap:.5rem">
+          <div style="font-family:var(--mono);font-size:.7rem;color:var(--muted)" id="progressLabel">Archivierung läuft...</div>
+          <div style="display:flex;gap:1rem;font-family:var(--mono);font-size:.75rem">
+            <span style="color:var(--success)">✓ <span id="progressDone">0</span></span>
+            <span style="color:var(--warn)">⟳ <span id="progressSkipped">0</span></span>
+            <span style="color:var(--danger)">✗ <span id="progressErrors">0</span></span>
+            <span style="color:var(--muted)">/ <span id="progressTotal">0</span></span>
+          </div>
+        </div>
+        <!-- Page progress -->
+        <div style="background:var(--surface2);border-radius:8px;height:10px;overflow:hidden;margin-bottom:.3rem">
+          <div id="progressBar" style="height:100%;width:0%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:8px;transition:width .25s ease"></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:.75rem">
+          <div style="font-family:var(--mono);font-size:.68rem;color:var(--muted)" id="progressCurrent">—</div>
+          <div style="font-family:var(--mono);font-size:.68rem;color:var(--accent)" id="progressPercent">0%</div>
+        </div>
+        <!-- Global progress across all pages/folders -->
+        <div style="border-top:1px solid var(--border);padding-top:.75rem">
+          <div style="display:flex;justify-content:space-between;margin-bottom:.4rem">
+            <div style="font-family:var(--mono);font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)">Gesamt-Fortschritt</div>
+            <div style="font-family:var(--mono);font-size:.68rem;color:var(--muted)">
+              <span id="globalDone" style="color:var(--success)">0</span>
+              <span style="color:var(--muted)"> / </span>
+              <span id="globalTotal">—</span>
+              <span style="color:var(--muted)"> Mails</span>
+            </div>
+          </div>
+          <div style="background:var(--surface2);border-radius:6px;height:8px;overflow:hidden">
+            <div id="globalBar" style="height:100%;width:0%;background:linear-gradient(90deg,rgba(13,148,136,.5),rgba(52,211,153,.5));border-radius:6px;transition:width .5s ease"></div>
+          </div>
+          <div style="font-family:var(--mono);font-size:.65rem;color:var(--muted);margin-top:.3rem;text-align:right" id="globalPercent">0%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-card"><div class="stat-label">Archiviert gesamt</div><div class="stat-value" id="statTotal">0</div></div>
+    <div class="stat-card"><div class="stat-label">Letzter Durchlauf</div><div class="stat-value small" id="statLast">—</div></div>
+    <div class="stat-card"><div class="stat-label">Ausgewaehlte Ordner</div><div class="stat-value" id="statFolders">—</div></div>
+    <div class="stat-card"><div class="stat-label">OneDrive-Ziel</div><div class="stat-value small" id="statFolder">MailArchiv</div></div>
+    <div class="stat-card" style="border-color:rgba(251,191,36,.3)">
+      <div class="stat-label">Journal</div>
+      <div class="stat-value" id="statJournal">0</div>
+      <button onclick="confirmResetJournal()" id="btnResetJournal" style="margin-top:.5rem;font-family:var(--mono);font-size:.6rem;background:none;border:1px solid rgba(248,113,113,.4);color:var(--danger);border-radius:4px;padding:.2rem .5rem;cursor:pointer" title="Alle archivierten Mails erneut archivieren">🗑 zurücksetzen</button>
+    </div>
+  </div>
+
+    <!-- Sync Status Bar -->
+  <div id="syncStatusBar" style="display:none;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:.75rem 1.25rem;margin-bottom:1.5rem;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem">
+    <div style="display:flex;align-items:center;gap:.75rem">
+      <div id="syncStatusDot" style="width:10px;height:10px;border-radius:50%;background:var(--muted);flex-shrink:0;transition:background .3s"></div>
+      <div>
+        <div style="font-family:var(--mono);font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)">Journal-Sync</div>
+        <div id="syncStatusText" style="font-family:var(--mono);font-size:.78rem;color:var(--text);margin-top:.1rem">Nicht synchronisiert</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:.75rem">
+      <div id="syncStatusTime" style="font-family:var(--mono);font-size:.68rem;color:var(--muted)"></div>
+      <button class="btn btn-ghost btn-sm" id="btnSync" onclick="syncSettings()">☁ Sync</button>
+    </div>
+  </div>
+
+<div class="diag-panel" id="diagPanel">
+    <div class="diag-header" onclick="toggleDiagPanel()">
+      <div class="diag-title-row">
+        <span class="diag-title">// Verbindungs-Diagnose</span>
+        <div class="diag-dots" id="diagDots">
+          <div class="diag-dot" id="dot-mail-auth"></div>
+          <div class="diag-dot" id="dot-mail-read"></div>
+          <div class="diag-dot" id="dot-mail-write"></div>
+          <div class="diag-dot" id="dot-drive-auth"></div>
+          <div class="diag-dot" id="dot-drive-write"></div>
+          <div class="diag-dot" id="dot-e2e"></div>
+        </div>
+        <div class="diag-overall idle" id="diagOverall">Nicht geprüft</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:.75rem">
+        <button class="btn btn-diag btn-sm" id="btnDiag" onclick="event.stopPropagation();runDiagnostics()"><div class="spinner"></div><span>Diagnose starten</span></button>
+        <span class="diag-chevron" id="diagChevron">▼</span>
+      </div>
+    </div>
+    <div class="diag-body" id="diagBody">
+    <div class="diag-grid" id="diagGrid">
+      <div class="diag-item"><div class="diag-icon">🔐</div><div class="diag-info"><div class="diag-name">Postfach-Anmeldung</div><div class="diag-desc">Token vorhanden?</div><div class="diag-status idle" id="d-mail-auth">Ausstehend</div></div></div>
+      <div class="diag-item"><div class="diag-icon">👤</div><div class="diag-info"><div class="diag-name">Benutzerprofil</div><div class="diag-desc">Profildaten abrufbar?</div><div class="diag-status idle" id="d-mail-me">Ausstehend</div></div></div>
+      <div class="diag-item"><div class="diag-icon">📥</div><div class="diag-info"><div class="diag-name">Posteingang lesen</div><div class="diag-desc">Mail.Read Berechtigung?</div><div class="diag-status idle" id="d-mail-read">Ausstehend</div></div></div>
+      <div class="diag-item"><div class="diag-icon">📬</div><div class="diag-info"><div class="diag-name">Postfach-Ordner</div><div class="diag-desc">mailFolders abrufbar?</div><div class="diag-status idle" id="d-mail-folders">Ausstehend</div></div></div>
+      <div class="diag-item"><div class="diag-icon">🗑️</div><div class="diag-info"><div class="diag-name">Mail loeschen</div><div class="diag-desc">Mail.ReadWrite Berechtigung?</div><div class="diag-status idle" id="d-mail-write">Ausstehend</div></div></div>
+      <div class="diag-item"><div class="diag-icon">☁️</div><div class="diag-info"><div class="diag-name">OneDrive-Anmeldung</div><div class="diag-desc">Drive-Token vorhanden?</div><div class="diag-status idle" id="d-drive-auth">Ausstehend</div></div></div>
+      <div class="diag-item"><div class="diag-icon">📁</div><div class="diag-info"><div class="diag-name">OneDrive lesen</div><div class="diag-desc">Stammverzeichnis abrufbar?</div><div class="diag-status idle" id="d-drive-read">Ausstehend</div></div></div>
+      <div class="diag-item"><div class="diag-icon">📤</div><div class="diag-info"><div class="diag-name">OneDrive schreiben</div><div class="diag-desc">Testdatei hochladen?</div><div class="diag-status idle" id="d-drive-write">Ausstehend</div></div></div>
+      <div class="diag-item"><div class="diag-icon">🧹</div><div class="diag-info"><div class="diag-name">Testdatei loeschen</div><div class="diag-desc">Cleanup nach Schreibtest</div><div class="diag-status idle" id="d-drive-clean">Ausstehend</div></div></div>
+      <div class="diag-item"><div class="diag-icon">📧</div><div class="diag-info"><div class="diag-name">Mail-Download (MIME)</div><div class="diag-desc">Erste Mail vollstaendig abrufbar?</div><div class="diag-status idle" id="d-mail-mime">Ausstehend</div></div></div>
+      <div class="diag-item"><div class="diag-icon">🔗</div><div class="diag-info"><div class="diag-name">End-to-End Simulation</div><div class="diag-desc">Kompletter Ablauf simuliert</div><div class="diag-status idle" id="d-e2e">Ausstehend</div></div></div>
+      <div class="diag-item"><div class="diag-icon">✅</div><div class="diag-info"><div class="diag-name">Gesamtergebnis</div><div class="diag-desc">Alle Tests bestanden?</div><div class="diag-status idle" id="d-result">Ausstehend</div></div></div>
+    </div>
+    <div class="diag-summary" id="diagSummary"></div>
+  </div>
+  </div>
+
+  <div class="folder-panel" id="folderPanel">
+    <div class="folder-header">
+      <span class="folder-title">// Postfach-Ordner auswaehlen</span>
+      <div class="folder-actions">
+        <button class="btn btn-ghost btn-sm" onclick="selectAllFolders(true)">Alle</button>
+        <button class="btn btn-ghost btn-sm" onclick="selectAllFolders(false)">Keine</button>
+        <button class="btn btn-primary btn-sm" id="btnLoadMails" onclick="loadSelectedFolders()"><div class="spinner"></div><span>Mails laden</span></button>
+      </div>
+    </div>
+    <div class="folder-grid" id="folderGrid"><div class="empty-state" style="grid-column:1/-1">Ordner werden nach der Verbindung geladen...</div></div>
+  </div>
+
+  <div class="log-panel">
+    <div class="log-header">
+      <span class="log-title">// Aktivitaetslog</span>
+      <div style="display:flex;gap:.5rem">
+        <button class="btn btn-ghost btn-sm" id="btnSync" onclick="syncSettings()">☁ Sync</button>
+        <button class="btn btn-ghost btn-sm" onclick="clearLog()">Leeren</button>
+      </div>
+    </div>
+    <div class="log-body" id="logBody">
+      <div class="log-line"><span class="log-time">—</span><span class="log-msg info">KMA bereit. Beide Konten verbinden, dann Diagnose starten.</span></div>
+    </div>
+  </div>
+
+  <div class="mail-panel">
+    <div class="mail-header">
+      <span class="mail-title">// Mails zur Archivierung</span>
+      <div class="search-wrap"><span style="color:var(--muted)">🔍</span><input type="text" id="searchInput" placeholder="Absender, Betreff..." oninput="filterMails()"/></div>
+      <div style="display:flex;gap:.5rem;align-items:center;flex-wrap:wrap">
+        <span id="pageIndicator" style="font-family:var(--mono);font-size:.7rem;color:var(--muted);display:none"></span>
+        <button class="btn btn-ghost btn-sm" id="btnNextPage" onclick="loadNextPage()" style="display:none"><div class="spinner"></div><span>▶ Nächste Seite</span></button>
+        <button class="btn btn-ghost btn-sm" id="btnResetPage" onclick="resetPagination()" style="display:none" title="Zurück zum Anfang">↺</button>
+
+        <button class="btn btn-primary" id="btnArchive" onclick="startArchiving()" disabled><div class="spinner"></div><span>Jetzt archivieren</span></button>
+        <button class="btn btn-danger" id="btnCancel" onclick="cancelArchiving()" style="display:none">⏹ Abbrechen</button>
+      </div>
+    </div>
+    <div class="mail-list" id="mailList"><div class="empty-state">Beide Konten verbinden, Diagnose starten, dann Ordner waehlen und laden.</div></div>
+  </div>
+</div>
+
+<!-- First-run Setup Wizard -->
+<div class="modal-overlay" id="setupWizardModal" style="z-index:200">
+  <div class="modal" style="max-width:520px">
+    <div style="text-align:center;margin-bottom:1.5rem">
+      <div style="width:60px;height:60px;background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:15px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto .75rem">📬</div>
+      <h3 style="font-size:1.3rem;margin-bottom:.4rem">Willkommen bei KMA</h3>
+      <p style="color:var(--muted);font-size:.85rem">Käppler Mail Archiv — Client ID einrichten</p>
+    </div>
+
+    <!-- Mode selector -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1.25rem">
+      <button id="wizardModeManual" onclick="setWizardMode('manual')"
+        style="padding:.75rem;border-radius:10px;border:2px solid var(--accent);background:rgba(13,148,136,.1);color:var(--text);cursor:pointer;font-family:var(--sans);font-weight:700;font-size:.85rem;transition:all .2s">
+        ✏️ Manuell eingeben
+      </button>
+      <button id="wizardModeFile" onclick="setWizardMode('file')"
+        style="padding:.75rem;border-radius:10px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;font-family:var(--sans);font-weight:700;font-size:.85rem;transition:all .2s">
+        📄 Aus Datei laden
+      </button>
+    </div>
+
+    <!-- Manual input -->
+    <div id="wizardManualSection" style="background:var(--surface2);border-radius:10px;padding:1.25rem;margin-bottom:1.25rem">
+      <div class="field" style="margin-bottom:.75rem">
+        <label>Postfach (M365) — Client ID</label>
+        <input type="text" id="wizardMailId" placeholder="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+          style="background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:var(--mono);font-size:.82rem;padding:.6rem .85rem;outline:none;width:100%"/>
+      </div>
+      <div class="field">
+        <label>OneDrive — Client ID <span style="color:var(--muted);font-weight:normal">(kann dieselbe sein)</span></label>
+        <input type="text" id="wizardDriveId" placeholder="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+          style="background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:var(--mono);font-size:.82rem;padding:.6rem .85rem;outline:none;width:100%"/>
+        <button onclick="copyMailIdToDriver()"
+          style="margin-top:.5rem;font-family:var(--mono);font-size:.68rem;background:none;border:1px solid var(--border);color:var(--muted);border-radius:4px;padding:.25rem .6rem;cursor:pointer">
+          ↓ Dieselbe ID übernehmen
+        </button>
+      </div>
+      <div style="font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-top:.75rem;line-height:1.8">
+        portal.azure.com → App-Registrierungen → KMA → Anwendungs-ID kopieren
+      </div>
+    </div>
+
+    <!-- File load section -->
+    <div id="wizardFileSection" style="background:var(--surface2);border-radius:10px;padding:1.25rem;margin-bottom:1.25rem;display:none">
+      <div style="font-family:var(--mono);font-size:.65rem;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem">JSON-Konfigurationsdatei laden</div>
+      <div style="border:2px dashed var(--border);border-radius:8px;padding:1.5rem;text-align:center;cursor:pointer;transition:border-color .2s"
+        id="fileDropZone"
+        onclick="document.getElementById('wizardFileInput').click()"
+        ondragover="event.preventDefault();this.style.borderColor='var(--accent)'"
+        ondragleave="this.style.borderColor='var(--border)'"
+        ondrop="handleFileDrop(event)">
+        <div style="font-size:2rem;margin-bottom:.5rem">📄</div>
+        <div style="font-size:.82rem;font-weight:700;margin-bottom:.25rem">Datei hierher ziehen</div>
+        <div style="font-family:var(--mono);font-size:.7rem;color:var(--muted)">oder klicken zum Auswählen (.json)</div>
+      </div>
+      <input type="file" id="wizardFileInput" accept=".json" style="display:none" onchange="handleFileSelect(event)"/>
+      <div id="fileLoadStatus" style="font-family:var(--mono);font-size:.75rem;margin-top:.75rem;min-height:1.2rem"></div>
+      <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border)">
+        <div style="font-family:var(--mono);font-size:.65rem;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem">Format der JSON-Datei</div>
+        <pre style="background:var(--bg);border-radius:6px;padding:.75rem;font-family:var(--mono);font-size:.7rem;color:var(--accent2);overflow-x:auto">{
+  "mailClientId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "driveClientId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+}</pre>
+        <button onclick="downloadConfigTemplate()"
+          style="margin-top:.5rem;font-family:var(--mono);font-size:.68rem;background:none;border:1px solid var(--border);color:var(--muted);border-radius:4px;padding:.25rem .6rem;cursor:pointer">
+          ⬇ Vorlage herunterladen
+        </button>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:.75rem">
+      <button class="btn btn-primary" onclick="saveWizardIds()" style="flex:1">Speichern & starten</button>
+      <button class="btn btn-ghost" onclick="skipWizard()">Überspringen</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="browserModal">
+  <div class="modal" style="max-width:520px">
+    <h3>📂 OneDrive-Ordner waehlen</h3>
+    <p>Navigiere zum Zielordner oder erstelle einen neuen.</p>
+    <div class="drive-breadcrumb" id="driveBreadcrumb">/ (Stammverzeichnis)</div>
+    <div class="drive-browser" id="driveBrowser"><div class="empty-state">Wird geladen...</div></div>
+    <div style="display:flex;gap:.5rem;margin-bottom:1rem;align-items:center">
+      <input type="text" id="newFolderName" placeholder="Neuer Ordner..." style="background:var(--surface2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:var(--mono);font-size:.8rem;padding:.5rem .8rem;outline:none;flex:1"/>
+      <button class="btn btn-ghost btn-sm" onclick="createDriveFolder()">Erstellen</button>
+    </div>
+    <div style="display:flex;gap:.75rem">
+      <button class="btn btn-drive" onclick="confirmFolderSelection()">Ordner auswaehlen</button>
+      <button class="btn btn-ghost" onclick="document.getElementById('browserModal').classList.remove('open')">Abbrechen</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="setupModal">
+  <div class="modal">
+    <h3>⚙ Azure App einrichten</h3>
+    <p>Eine App-Registrierung reicht fuer beide Konten.</p>
+    <code>1. portal.azure.com oeffnen
+2. App-Registrierungen > Neue Registrierung
+3. Name: KMA
+4. Kontotypen: mittlere Option
+5. Umleitungs-URI: Single-page application (SPA)
+   > https://kmailarchive.netlify.app
+6. Anwendungs-ID (Client) kopieren
+7. API-Berechtigungen:
+   Mail.Read, Mail.ReadWrite,
+   Files.ReadWrite, User.Read
+8. Administratorzustimmung erteilen</code>
+    <button class="btn btn-primary" onclick="document.getElementById('setupModal').classList.remove('open')">Verstanden</button>
+  </div>
+</div>
+
+<script>
+// ── State ──────────────────────────────────────────────────────────────────
+var mailToken = null, driveToken = null;
+var msalMail = null, msalDrive = null;
+var allMails = [], allFolders = [], selectedFolderIds = new Set();
+var archivedCount = parseInt(localStorage.getItem('mv_archived') || '0');
+var archivedJournal = new Set(JSON.parse(localStorage.getItem('mv_journal') || '[]'));
+var autoTimer = null, driveBrowserPath = '', selectedDrivePath = '';
+var archiveCancelled = false;
+var SETTINGS_FILE = 'MailArchiv/Settings/kma-settings.json';
+// Pagination
+var pageNextLinks = {};
+var totalMailsFound = 0;
+// Global progress tracking
+var totalMailsInFolders = 0;   // total mails across all selected folders
+var globalArchivedCount = 0;   // archived in this session (all pages)
+// Session folder — same timestamp for all pages in one session
+var currentSessionFolder = null;
+
+var FOLDER_ICONS = {inbox:'📥',sentitems:'📤',deleteditems:'🗑️',drafts:'📝',junkemail:'🚫',archive:'📦',outbox:'📮'};
+var FOLDER_NAMES_DE = {inbox:'Posteingang',sentitems:'Gesendet',deleteditems:'Geloescht',drafts:'Entwuerfe',junkemail:'Junk',archive:'Archiv',outbox:'Postausgang'};
+
+// ── MSAL ───────────────────────────────────────────────────────────────────
+function makeMsal(clientId) {
+  return new msal.PublicClientApplication({
+    auth: { clientId: clientId, authority: 'https://login.microsoftonline.com/common', redirectUri: window.location.origin + window.location.pathname },
+    cache: { cacheLocation: 'sessionStorage' }
+  });
+}
+
+// ── Token Refresh ─────────────────────────────────────────────────────────
+async function refreshMailToken() {
+  if (!msalMail) return false;
+  try {
+    var accounts = msalMail.getAllAccounts();
+    if (!accounts.length) return false;
+    var r = await msalMail.acquireTokenSilent({
+      scopes: ['Mail.Read', 'Mail.ReadWrite', 'User.Read'],
+      account: accounts[0]
+    });
+    mailToken = r.accessToken;
+    log('Postfach-Token erneuert.', 'info');
+    return true;
+  } catch(e) {
+    log('Token-Erneuerung fehlgeschlagen: ' + e.message, 'warn');
+    return false;
+  }
+}
+
+async function refreshDriveToken() {
+  if (!msalDrive) return false;
+  try {
+    var accounts = msalDrive.getAllAccounts();
+    if (!accounts.length) return false;
+    var r = await msalDrive.acquireTokenSilent({
+      scopes: ['Files.ReadWrite', 'User.Read'],
+      account: accounts[0]
+    });
+    driveToken = r.accessToken;
+    log('OneDrive-Token erneuert.', 'info');
+    return true;
+  } catch(e) {
+    log('OneDrive-Token-Erneuerung fehlgeschlagen: ' + e.message, 'warn');
+    return false;
+  }
+}
+
+async function apiGetWithRefresh(token, url, isMailToken) {
+  try {
+    var r = await fetch(url, { headers: { Authorization: 'Bearer ' + token } });
+    if (r.status === 401) {
+      log('Token abgelaufen — erneuere...', 'warn');
+      var refreshed = isMailToken ? await refreshMailToken() : await refreshDriveToken();
+      if (refreshed) {
+        var newToken = isMailToken ? mailToken : driveToken;
+        r = await fetch(url, { headers: { Authorization: 'Bearer ' + newToken } });
+      }
+    }
+    if (!r.ok) throw new Error('API ' + r.status + ': ' + r.statusText);
+    return r.json();
+  } catch(e) { throw e; }
+}
+
+// ── Connect Mail ───────────────────────────────────────────────────────────
+async function connectMail() {
+  var clientId = document.getElementById('clientId').value.trim();
+  if (!clientId) { log('Bitte Mail-Client ID eingeben.', 'error'); return; }
+  var btn = document.getElementById('btnConnectMail');
+  btn.classList.add('spinning'); btn.disabled = true;
+  try {
+    msalMail = makeMsal(clientId);
+    await msalMail.initialize();
+    var r = await msalMail.loginPopup({ scopes: ['Mail.Read', 'Mail.ReadWrite', 'User.Read'] });
+    mailToken = r.accessToken;
+    localStorage.setItem('mv_mail_clientid', clientId);
+    var me = await apiGet(mailToken, 'https://graph.microsoft.com/v1.0/me');
+    log('Postfach verbunden: ' + (me.mail || me.userPrincipalName), 'success');
+    document.getElementById('dotMail').className = 'status-dot connected';
+    document.getElementById('txtMail').textContent = me.displayName;
+    btn.style.display = 'none';
+    document.getElementById('btnDisconnectMail').style.display = '';
+    document.getElementById('clientId').disabled = true;
+    await loadFolders();
+    setupAutoArchive();
+    checkBothConnected();
+  } catch(e) { log('Postfach-Anmeldung fehlgeschlagen: ' + (e.message || e), 'error'); }
+  btn.classList.remove('spinning'); btn.disabled = false;
+}
+
+function disconnectMail() {
+  mailToken = null; msalMail = null; allMails = []; allFolders = []; selectedFolderIds = new Set();
+  if (autoTimer) clearInterval(autoTimer);
+  document.getElementById('dotMail').className = 'status-dot';
+  document.getElementById('txtMail').textContent = 'Nicht verbunden';
+  document.getElementById('btnConnectMail').style.display = '';
+  document.getElementById('btnDisconnectMail').style.display = 'none';
+  document.getElementById('clientId').disabled = false;
+  document.getElementById('folderPanel').classList.remove('visible');
+  document.getElementById('btnArchive').disabled = true;
+  renderMails([]);
+  log('Postfach abgemeldet.', 'warn');
+}
+
+// ── Connect Drive ──────────────────────────────────────────────────────────
+async function connectDrive() {
+  var clientId = document.getElementById('driveClientId').value.trim();
+  if (!clientId) { log('Bitte OneDrive-Client ID eingeben.', 'error'); return; }
+  var btn = document.getElementById('btnConnectDrive');
+  btn.classList.add('spinning'); btn.disabled = true;
+  try {
+    msalDrive = makeMsal(clientId);
+    await msalDrive.initialize();
+    var r = await msalDrive.loginPopup({ scopes: ['Files.ReadWrite', 'User.Read'] });
+    driveToken = r.accessToken;
+    localStorage.setItem('mv_drive_clientid', clientId);
+    var me = await apiGet(driveToken, 'https://graph.microsoft.com/v1.0/me');
+    log('OneDrive verbunden: ' + (me.mail || me.userPrincipalName), 'success');
+    document.getElementById('dotDrive').className = 'status-dot connected';
+    document.getElementById('txtDrive').textContent = me.displayName;
+    btn.style.display = 'none';
+    document.getElementById('btnDisconnectDrive').style.display = '';
+    document.getElementById('driveClientId').disabled = true;
+    document.getElementById('btnBrowse').disabled = false;
+    await loadSettingsFromOneDrive();
+    updateStats();
+    checkBothConnected();
+  } catch(e) { log('OneDrive-Anmeldung fehlgeschlagen: ' + (e.message || e), 'error'); }
+  btn.classList.remove('spinning'); btn.disabled = false;
+}
+
+function disconnectDrive() {
+  driveToken = null; msalDrive = null;
+  document.getElementById('dotDrive').className = 'status-dot';
+  document.getElementById('txtDrive').textContent = 'Nicht verbunden';
+  document.getElementById('btnConnectDrive').style.display = '';
+  document.getElementById('btnDisconnectDrive').style.display = 'none';
+  document.getElementById('driveClientId').disabled = false;
+  document.getElementById('btnBrowse').disabled = true;
+  document.getElementById('btnArchive').disabled = true;
+  log('OneDrive abgemeldet.', 'warn');
+}
+
+function checkBothConnected() {
+  document.getElementById('btnArchive').disabled = !(mailToken && driveToken);
+  if (mailToken && driveToken) log('Beide Konten verbunden — Diagnose empfohlen vor erstem Archivieren.', 'success');
+}
+
+// ── API Helpers ────────────────────────────────────────────────────────────
+async function apiGet(token, url) {
+  var r = await fetch(url, { headers: { Authorization: 'Bearer ' + token } });
+  if (!r.ok) throw new Error('API ' + r.status + ': ' + r.statusText);
+  return r.json();
+}
+async function apiPost(token, url, body) {
+  var r = await fetch(url, { method: 'POST', headers: { Authorization: 'Bearer ' + token, 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+  if (!r.ok) throw new Error('API POST ' + r.status);
+  return r.json();
+}
+async function apiPut(token, url, data, ct) {
+  var r = await fetch(url, { method: 'PUT', headers: { Authorization: 'Bearer ' + token, 'Content-Type': ct || 'application/octet-stream' }, body: data });
+  if (r.status === 401) {
+    await refreshDriveToken();
+    r = await fetch(url, { method: 'PUT', headers: { Authorization: 'Bearer ' + driveToken, 'Content-Type': ct || 'application/octet-stream' }, body: data });
+  }
+  if (!r.ok) throw new Error('API PUT ' + r.status);
+  return r.json();
+}
+async function apiDelete(token, url) {
+  await fetch(url, { method: 'DELETE', headers: { Authorization: 'Bearer ' + token } });
+}
+
+// ── OneDrive Settings Sync ─────────────────────────────────────────────────
+async function loadSettingsFromOneDrive() {
+  if (!driveToken) return;
+  try {
+    var res = await fetch('https://graph.microsoft.com/v1.0/me/drive/root:/' + SETTINGS_FILE + ':/content', { headers: { Authorization: 'Bearer ' + driveToken } });
+    if (!res.ok) return;
+    var s = await res.json();
+    if (s.journal && Array.isArray(s.journal)) {
+      archivedJournal = new Set(s.journal);
+      localStorage.setItem('mv_journal', JSON.stringify(s.journal));
+    }
+    if (s.archivedCount) { archivedCount = s.archivedCount; localStorage.setItem('mv_archived', archivedCount); }
+    if (s.mailClientId) { document.getElementById('clientId').value = s.mailClientId; document.getElementById('mailIdSaved').textContent = '✓ gespeichert'; localStorage.setItem('mv_mail_clientid', s.mailClientId); }
+    if (s.driveClientId) { document.getElementById('driveClientId').value = s.driveClientId; document.getElementById('driveIdSaved').textContent = '✓ gespeichert'; localStorage.setItem('mv_drive_clientid', s.driveClientId); }
+    if (s.folderName) document.getElementById('folderName').value = s.folderName;
+    if (s.ageDays) document.getElementById('ageDays').value = s.ageDays;
+    // Restore session
+    if (s.sessionFolder && !currentSessionFolder) {
+      // Only restore from OneDrive if not already restored from localStorage
+      currentSessionFolder = s.sessionFolder;
+      log('Sitzung aus OneDrive geladen: ' + s.sessionFolder, 'warn');
+      setTimeout(function(){ showResumeDialog(s.sessionFolder); }, 50);
+    }
+    if (s.pageNextLinks && Object.keys(s.pageNextLinks).length > 0) {
+      pageNextLinks = s.pageNextLinks;
+      log('Seitenposition wiederhergestellt — ' + Object.keys(pageNextLinks).length + ' Ordner haben offene Seiten.', 'info');
+    }
+    updateStats();
+    setSyncStatus('ok', archivedJournal.size + ' Einträge geladen', new Date());
+    log('Einstellungen aus OneDrive geladen (' + archivedJournal.size + ' Journal-Eintraege).', 'success');
+  } catch(e) {
+    setSyncStatus('fail', 'Sync fehlgeschlagen: ' + e.message, null);
+    log('Einstellungen konnten nicht aus OneDrive geladen werden: ' + e.message, 'warn');
+  }
+}
+
+async function saveSettingsToOneDrive() {
+  if (!driveToken) return;
+  try {
+    var s = {
+      mailClientId: document.getElementById('clientId').value.trim(),
+      driveClientId: document.getElementById('driveClientId').value.trim(),
+      folderName: document.getElementById('folderName').value.trim(),
+      ageDays: document.getElementById('ageDays').value,
+      archivedCount: archivedCount,
+      journal: Array.from(archivedJournal),
+      lastSaved: new Date().toISOString(),
+      sessionFolder: currentSessionFolder || null,
+      pageNextLinks: pageNextLinks || {}
+    };
+    try { await ensureDriveFolder(driveToken, 'MailArchiv'); } catch(e) {}
+    var blob = new Blob([JSON.stringify(s, null, 2)], { type: 'application/json' });
+    await apiPut(driveToken, 'https://graph.microsoft.com/v1.0/me/drive/root:/' + SETTINGS_FILE + ':/content', blob, 'application/json');
+    setSyncStatus('ok', archivedJournal.size + ' Einträge gespeichert', new Date());
+    log('Einstellungen auf OneDrive gespeichert.', 'success');
+  } catch(e) {
+    setSyncStatus('fail', 'Speichern fehlgeschlagen: ' + e.message, null);
+    log('Einstellungen konnten nicht gespeichert werden: ' + e.message, 'warn');
+  }
+}
+
+function showResumeDialog(sessionFolder) {
+  // Prevent duplicate banners
+  var existing = document.getElementById('resumeBanner');
+  if (existing) return; // Already shown
+  var banner = document.createElement('div');
+  banner.id = 'resumeBanner';
+  banner.style.cssText = 'background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.4);border-radius:12px;padding:1rem 1.25rem;margin-bottom:1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap';
+  var folderShort = sessionFolder ? sessionFolder.split('/').slice(-1)[0] : '';
+  banner.innerHTML =
+    '<div>' +
+      '<div style="font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--warn);margin-bottom:.3rem">⚠ Offene Sitzung gefunden</div>' +
+      '<div style="font-family:var(--mono);font-size:.78rem;color:var(--text)">' + escHtml(folderShort) + '</div>' +
+      '<div style="font-family:var(--mono);font-size:.65rem;color:var(--muted);margin-top:.2rem">' + escHtml(sessionFolder) + '</div>' +
+    '</div>' +
+    '<div style="display:flex;gap:.5rem;flex-shrink:0">' +
+      '<button class="btn btn-primary btn-sm" id="btnResume" onclick="resumeSession()">↩ Fortsetzen</button>' +
+      '<button class="btn btn-ghost btn-sm" id="btnDiscard" onclick="discardSession()">✕ Neue Sitzung</button>' +
+    '</div>';
+  // Insert at top of main container — always works regardless of DOM state
+  var insertFn = function() {
+    var container = document.querySelector('.container');
+    if (container) {
+      container.insertBefore(banner, container.firstChild);
+    } else {
+      document.body.insertBefore(banner, document.body.firstChild);
+    }
+  };
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', insertFn);
+  } else {
+    insertFn();
+  }
+}
+
+
+function resumeSession() {
+  var banner = document.getElementById('resumeBanner');
+  if (banner) banner.remove();
+  log('Sitzung fortgesetzt: ' + currentSessionFolder, 'success');
+  // Restore pageNextLinks from localStorage
+  var savedLinks = localStorage.getItem('kma_page_links');
+  if (savedLinks) {
+    try { pageNextLinks = JSON.parse(savedLinks); } catch(e) {}
+  }
+  // Auto-load folders if already selected
+  if (selectedFolderIds.size > 0) {
+    loadSelectedFolders();
+  } else {
+    log('Bitte Ordner auswählen und Mails laden — Archivierung wird im Ordner "' + currentSessionFolder + '" fortgesetzt.', 'warn');
+  }
+}
+
+function discardSession() {
+  currentSessionFolder = null;
+  pageNextLinks = {};
+  localStorage.removeItem('kma_session_folder');
+  localStorage.removeItem('kma_session_root');
+  localStorage.removeItem('kma_page_links');
+  var banner = document.getElementById('resumeBanner');
+  if (banner) banner.remove();
+  log('Neue Sitzung gestartet — neuer Zeitstempel-Ordner wird angelegt.', 'warn');
+  saveSettingsToOneDrive();
+}
+
+function setSyncStatus(status, message, time) {
+  var bar = document.getElementById('syncStatusBar');
+  var dot = document.getElementById('syncStatusDot');
+  var txt = document.getElementById('syncStatusText');
+  var timeEl = document.getElementById('syncStatusTime');
+  if (!bar) return;
+  bar.style.display = 'flex';
+  if (status === 'ok') {
+    dot.style.background = 'var(--success)';
+    dot.style.boxShadow = '0 0 8px var(--success)';
+    bar.style.borderColor = 'rgba(52,211,153,.3)';
+    txt.style.color = 'var(--success)';
+    txt.textContent = '✓ ' + message;
+  } else if (status === 'fail') {
+    dot.style.background = 'var(--danger)';
+    dot.style.boxShadow = '0 0 8px var(--danger)';
+    bar.style.borderColor = 'rgba(248,113,113,.3)';
+    txt.style.color = 'var(--danger)';
+    txt.textContent = '✗ ' + message;
+  } else if (status === 'running') {
+    dot.style.background = 'var(--accent)';
+    dot.style.boxShadow = '0 0 8px var(--accent)';
+    dot.style.animation = 'diagpulse .8s infinite';
+    bar.style.borderColor = 'rgba(13,148,136,.3)';
+    txt.style.color = 'var(--accent)';
+    txt.textContent = '↻ ' + message;
+    return;
+  }
+  dot.style.animation = '';
+  if (time) {
+    timeEl.textContent = 'Zuletzt: ' + time.toLocaleTimeString('de-DE');
+  }
+}
+
+async function syncSettings() {
+  if (!driveToken) { log('Bitte zuerst OneDrive verbinden.', 'warn'); return; }
+  var btn = document.getElementById('btnSync');
+  btn.textContent = '☁ ...'; btn.disabled = true;
+  setSyncStatus('running', 'Wird synchronisiert...', null);
+  await loadSettingsFromOneDrive();
+  btn.textContent = '☁ Sync'; btn.disabled = false;
+}
+
+// ── Diagnostics ────────────────────────────────────────────────────────────
+function toggleDiagPanel() {
+  var body = document.getElementById('diagBody');
+  var chevron = document.getElementById('diagChevron');
+  var isOpen = body.classList.contains('open');
+  if (isOpen) { body.classList.remove('open'); chevron.classList.remove('open'); }
+  else { body.classList.add('open'); chevron.classList.add('open'); }
+}
+
+function updateDiagDot(dotId, diagId, status) {
+  var dot = document.getElementById(dotId);
+  if (dot) { dot.className = 'diag-dot ' + status; }
+}
+
+function updateOverall(failed, warnings) {
+  var el = document.getElementById('diagOverall');
+  var panel = document.getElementById('diagPanel');
+  if (!el) return;
+  if (failed > 0) {
+    el.className = 'diag-overall fail';
+    el.textContent = failed + ' Fehler';
+    panel.classList.remove('all-ok');
+  } else if (warnings > 0) {
+    el.className = 'diag-overall warn';
+    el.textContent = warnings + ' Warnung(en)';
+    panel.classList.remove('all-ok');
+  } else {
+    el.className = 'diag-overall ok';
+    el.textContent = '✓ Alle Tests bestanden';
+    panel.classList.add('all-ok');
+    // Auto-collapse when all green
+    var body = document.getElementById('diagBody');
+    var chevron = document.getElementById('diagChevron');
+    if (body && body.classList.contains('open')) {
+      setTimeout(function(){
+        body.classList.remove('open');
+        chevron.classList.remove('open');
+      }, 1500);
+    }
+  }
+}
+
+function setDiag(id, status, text) {
+  var el = document.getElementById(id);
+  if (!el) return;
+  el.className = 'diag-status ' + status;
+  el.textContent = text;
+}
+
+async function runDiagnostics() {
+  var btn = document.getElementById('btnDiag');
+  btn.classList.add('spinning'); btn.disabled = true;
+  var summary = document.getElementById('diagSummary');
+  summary.classList.remove('visible');
+  var passed = 0, failed = 0, warnings = 0, issues = [];
+  log('=== Diagnose gestartet ===', 'info');
+  // Open panel during diagnostics
+  var diagBody = document.getElementById('diagBody');
+  var diagChevron = document.getElementById('diagChevron');
+  diagBody.classList.add('open');
+  diagChevron.classList.add('open');
+  document.getElementById('diagPanel').classList.remove('all-ok');
+  document.getElementById('diagOverall').className = 'diag-overall idle';
+  document.getElementById('diagOverall').textContent = 'Wird geprüft...';
+  ['dot-mail-auth','dot-mail-read','dot-mail-write','dot-drive-auth','dot-drive-write','dot-e2e'].forEach(function(id){
+    var d = document.getElementById(id); if(d) d.className = 'diag-dot running';
+  });
+  ['d-mail-auth','d-mail-me','d-mail-read','d-mail-folders','d-mail-write','d-drive-auth','d-drive-read','d-drive-write','d-drive-clean','d-mail-mime','d-e2e','d-result'].forEach(function(id){ setDiag(id,'idle','Ausstehend'); });
+
+  setDiag('d-mail-auth','running','Pruefe...');
+  await sleep(300);
+  if (mailToken) { setDiag('d-mail-auth','ok','✓ Token vorhanden'); log('✓ Postfach-Token vorhanden','success'); passed++; }
+  else { setDiag('d-mail-auth','fail','✗ Nicht verbunden'); log('✗ Kein Postfach-Token','error'); failed++; issues.push('Postfach nicht verbunden'); }
+
+  setDiag('d-mail-me','running','Pruefe...');
+  await sleep(300);
+  if (mailToken) {
+    try { var me = await apiGet(mailToken,'https://graph.microsoft.com/v1.0/me'); setDiag('d-mail-me','ok','✓ ' + escHtml(me.displayName)); log('✓ Profil: ' + me.displayName,'success'); passed++; }
+    catch(e) { setDiag('d-mail-me','fail','✗ ' + escHtml(e.message)); log('✗ Profil: ' + e.message,'error'); failed++; issues.push('Profil nicht abrufbar'); }
+  } else { setDiag('d-mail-me','fail','✗ Kein Token'); failed++; }
+
+  setDiag('d-mail-read','running','Pruefe...');
+  await sleep(300);
+  if (mailToken) {
+    try { await apiGet(mailToken,'https://graph.microsoft.com/v1.0/me/mailFolders/inbox/messages?$top=1&$select=id'); setDiag('d-mail-read','ok','✓ Mail.Read OK'); log('✓ Mail.Read vorhanden','success'); passed++; }
+    catch(e) { setDiag('d-mail-read','fail','✗ Keine Berechtigung'); log('✗ Mail.Read fehlt: ' + e.message,'error'); failed++; issues.push('Mail.Read fehlt'); }
+  } else { setDiag('d-mail-read','fail','✗ Kein Token'); failed++; }
+
+  setDiag('d-mail-folders','running','Pruefe...');
+  await sleep(300);
+  if (mailToken) {
+    try { var fd = await apiGet(mailToken,'https://graph.microsoft.com/v1.0/me/mailFolders?$top=5&$select=id,displayName'); setDiag('d-mail-folders','ok','✓ ' + fd.value.length + ' Ordner'); log('✓ Ordner abrufbar','success'); passed++; }
+    catch(e) { setDiag('d-mail-folders','fail','✗ ' + escHtml(e.message)); log('✗ Ordner: ' + e.message,'error'); failed++; issues.push('Ordner nicht abrufbar'); }
+  } else { setDiag('d-mail-folders','fail','✗ Kein Token'); failed++; }
+
+  setDiag('d-mail-write','running','Pruefe...');
+  await sleep(300);
+  if (mailToken) {
+    try {
+      var payload = JSON.parse(atob(mailToken.split('.')[1].replace(/-/g,'+').replace(/_/g,'/')));
+      var scopes = (payload.scp || payload.scope || '').toLowerCase();
+      if (scopes.includes('mail.readwrite')) { setDiag('d-mail-write','ok','✓ Mail.ReadWrite OK'); log('✓ Mail.ReadWrite vorhanden','success'); passed++; }
+      else { setDiag('d-mail-write','warn','⚠ Nicht im Token'); log('⚠ Mail.ReadWrite fehlt','warn'); warnings++; issues.push('Mail.ReadWrite fehlt'); }
+    } catch(e) { setDiag('d-mail-write','warn','⚠ Nicht pruefbar'); warnings++; }
+  } else { setDiag('d-mail-write','fail','✗ Kein Token'); failed++; }
+
+  setDiag('d-drive-auth','running','Pruefe...');
+  await sleep(300);
+  if (driveToken) { setDiag('d-drive-auth','ok','✓ Token vorhanden'); log('✓ OneDrive-Token vorhanden','success'); passed++; }
+  else { setDiag('d-drive-auth','fail','✗ Nicht verbunden'); log('✗ Kein OneDrive-Token','error'); failed++; issues.push('OneDrive nicht verbunden'); }
+
+  setDiag('d-drive-read','running','Pruefe...');
+  await sleep(300);
+  if (driveToken) {
+    try { var drv = await apiGet(driveToken,'https://graph.microsoft.com/v1.0/me/drive/root'); setDiag('d-drive-read','ok','✓ Drive erreichbar'); log('✓ OneDrive erreichbar','success'); passed++; }
+    catch(e) { setDiag('d-drive-read','fail','✗ ' + escHtml(e.message)); log('✗ OneDrive: ' + e.message,'error'); failed++; issues.push('OneDrive nicht lesbar'); }
+  } else { setDiag('d-drive-read','fail','✗ Kein Token'); failed++; }
+
+  setDiag('d-drive-write','running','Pruefe...');
+  await sleep(300);
+  var testFileId = null;
+  if (driveToken) {
+    try {
+      var tb = new Blob(['KMA Diagnose ' + new Date().toISOString()], { type: 'text/plain' });
+      var tr = await apiPut(driveToken,'https://graph.microsoft.com/v1.0/me/drive/root:/KMA_test_diag.txt:/content',tb,'text/plain');
+      testFileId = tr.id;
+      setDiag('d-drive-write','ok','✓ Schreiben OK'); log('✓ OneDrive Schreibtest OK','success'); passed++;
+    } catch(e) { setDiag('d-drive-write','fail','✗ ' + escHtml(e.message)); log('✗ OneDrive schreiben: ' + e.message,'error'); failed++; issues.push('OneDrive nicht beschreibbar'); }
+  } else { setDiag('d-drive-write','fail','✗ Kein Token'); failed++; }
+
+  setDiag('d-drive-clean','running','Pruefe...');
+  await sleep(300);
+  if (driveToken && testFileId) {
+    try { await apiDelete(driveToken,'https://graph.microsoft.com/v1.0/me/drive/items/' + testFileId); setDiag('d-drive-clean','ok','✓ Cleanup OK'); log('✓ Testdatei geloescht','success'); passed++; }
+    catch(e) { setDiag('d-drive-clean','warn','⚠ Cleanup fehlgeschlagen'); warnings++; }
+  } else if (!testFileId) { setDiag('d-drive-clean','warn','⚠ Kein Upload'); warnings++; }
+  else { setDiag('d-drive-clean','fail','✗ Kein Token'); failed++; }
+
+  setDiag('d-mail-mime','running','Pruefe...');
+  await sleep(300);
+  if (mailToken) {
+    try {
+      var fm = await apiGet(mailToken,'https://graph.microsoft.com/v1.0/me/messages?$top=1&$select=id,subject');
+      if (fm.value && fm.value.length > 0) {
+        var mr = await fetch('https://graph.microsoft.com/v1.0/me/messages/' + fm.value[0].id + '/$value', { headers: { Authorization: 'Bearer ' + mailToken } });
+        if (mr.ok) { var mb = await mr.blob(); setDiag('d-mail-mime','ok','✓ ' + Math.round(mb.size/1024) + ' KB'); log('✓ MIME-Download: "' + fm.value[0].subject + '"','success'); passed++; }
+        else throw new Error('HTTP ' + mr.status);
+      } else { setDiag('d-mail-mime','warn','⚠ Keine Mails'); warnings++; }
+    } catch(e) { setDiag('d-mail-mime','fail','✗ ' + escHtml(e.message)); log('✗ MIME-Download: ' + e.message,'error'); failed++; issues.push('Mail-Download fehlgeschlagen'); }
+  } else { setDiag('d-mail-mime','fail','✗ Kein Token'); failed++; }
+
+  setDiag('d-e2e','running','Simuliere...');
+  await sleep(400);
+  if (mailToken && driveToken && failed === 0) { setDiag('d-e2e','ok','✓ Alle Voraussetzungen'); log('✓ End-to-End OK','success'); passed++; }
+  else if (failed === 0) { setDiag('d-e2e','warn','⚠ Mit Einschraenkungen'); warnings++; }
+  else { setDiag('d-e2e','fail','✗ Voraussetzungen fehlen'); failed++; }
+
+  await sleep(300);
+  if (failed === 0 && warnings === 0) { setDiag('d-result','ok','✓ Alle Tests bestanden'); log('=== Diagnose: ALLES OK ===','success'); }
+  else if (failed === 0) { setDiag('d-result','warn','⚠ ' + warnings + ' Warnung(en)'); log('=== Diagnose: OK mit Warnungen ===','warn'); }
+  else { setDiag('d-result','fail','✗ ' + failed + ' Fehler'); log('=== Diagnose: ' + failed + ' Fehler ===','error'); }
+
+  // Update mini dots
+  var dotMap = {'dot-mail-auth':'d-mail-auth','dot-mail-read':'d-mail-read','dot-mail-write':'d-mail-write','dot-drive-auth':'d-drive-auth','dot-drive-write':'d-drive-write','dot-e2e':'d-e2e'};
+  Object.keys(dotMap).forEach(function(dotId) {
+    var diagEl = document.getElementById(dotMap[dotId]);
+    var dot = document.getElementById(dotId);
+    if (diagEl && dot) {
+      var cls = diagEl.className.replace('diag-status ','');
+      dot.className = 'diag-dot ' + cls;
+    }
+  });
+
+  updateOverall(failed, warnings);
+
+  summary.classList.add('visible');
+  if (issues.length > 0) summary.innerHTML = '<span style="color:var(--danger)">Zu beheben: </span>' + issues.map(escHtml).join(' · ');
+  else summary.innerHTML = '<span style="color:var(--success)">Alles bereit — du kannst jetzt archivieren.</span>';
+
+  btn.classList.remove('spinning'); btn.disabled = false;
+}
+
+function sleep(ms) { return new Promise(function(r){ setTimeout(r, ms); }); }
+
+// ── Load Folders ───────────────────────────────────────────────────────────
+async function loadFolders() {
+  if (!mailToken) { log('Bitte zuerst Postfach verbinden.', 'warn'); return; }
+  var btn = document.getElementById('btnLoadFolders');
+  if (btn) { btn.classList.add('spinning'); btn.disabled = true; }
+  try {
+    var data = await apiGet(mailToken, 'https://graph.microsoft.com/v1.0/me/mailFolders?$top=100&includeHiddenFolders=false');
+    var topLevel = data.value || [];
+    var allLoaded = [];
+
+    async function loadChildren(parentId, parentName, depth) {
+      if (depth > 6) return;
+      try {
+        var cd = await apiGet(mailToken, 'https://graph.microsoft.com/v1.0/me/mailFolders/' + parentId + '/childFolders?$top=100');
+        var kids = cd.value || [];
+        for (var j = 0; j < kids.length; j++) {
+          kids[j]._parentId = parentId;
+          kids[j]._parentName = parentName;
+          allLoaded.push(kids[j]);
+          if (kids[j].childFolderCount > 0) {
+            await loadChildren(kids[j].id, kids[j].displayName, depth + 1);
+          }
+        }
+      } catch(e) { log('Unterordner Fehler (' + parentName + '): ' + e.message, 'warn'); }
+    }
+
+    for (var i = 0; i < topLevel.length; i++) {
+      allLoaded.push(topLevel[i]);
+      if (topLevel[i].childFolderCount > 0) {
+        await loadChildren(topLevel[i].id, topLevel[i].displayName, 1);
+      }
+    }
+
+    allFolders = allLoaded;
+    renderFolders();
+    log(allFolders.length + ' Ordner geladen (alle Ebenen).', 'success');
+  } catch(e) { log('Fehler beim Laden der Ordner: ' + e.message, 'error'); }
+  if (btn) { btn.classList.remove('spinning'); btn.disabled = false; }
+}
+
+function getFolderIcon(displayName) {
+  var dn = displayName.toLowerCase();
+  if (dn.includes('posteingang') || dn.includes('inbox')) return {icon:'📥', name:'Posteingang'};
+  if (dn.includes('gesendet') || dn.includes('sent')) return {icon:'📤', name:'Gesendet'};
+  if (dn.includes('gelöscht') || dn.includes('deleted') || dn.includes('trash')) return {icon:'🗑️', name:'Gelöscht'};
+  if (dn.includes('entwurf') || dn.includes('draft')) return {icon:'📝', name:'Entwürfe'};
+  if (dn.includes('junk') || dn.includes('spam')) return {icon:'🚫', name:'Junk'};
+  if (dn.includes('archiv') || dn.includes('archive')) return {icon:'📦', name:'Archiv'};
+  if (dn.includes('postausgang') || dn.includes('outbox')) return {icon:'📮', name:'Postausgang'};
+  return {icon:'📁', name: displayName};
+}
+
+function renderFolders() {
+  var grid = document.getElementById('folderGrid');
+
+  // Build parent→children map
+  var childMap = {};
+  allFolders.forEach(function(f) {
+    var pid = f._parentId || '__root__';
+    if (!childMap[pid]) childMap[pid] = [];
+    childMap[pid].push(f);
+  });
+
+  // Sort children: known folders first, then alpha
+  var knownOrder = ['posteingang','inbox','gesendet','sent','entwurf','draft','gelöscht','deleted','junk','spam','archiv','archive','postausgang','outbox'];
+  function sortFolders(list) {
+    return list.slice().sort(function(a, b) {
+      var ai = knownOrder.findIndex(function(k){ return a.displayName.toLowerCase().includes(k); });
+      var bi = knownOrder.findIndex(function(k){ return b.displayName.toLowerCase().includes(k); });
+      if (ai >= 0 && bi >= 0) return ai - bi;
+      if (ai >= 0) return -1;
+      if (bi >= 0) return 1;
+      return a.displayName.localeCompare(b.displayName, 'de');
+    });
+  }
+
+  function renderLevel(parentId, depth) {
+    var children = childMap[parentId] || [];
+    children = sortFolders(children);
+    var html = '';
+    children.forEach(function(folder) {
+      var fi = getFolderIcon(folder.displayName);
+      var name = depth === 0 ? fi.name : folder.displayName;
+      var sel = selectedFolderIds.has(folder.id);
+      var kids = childMap[folder.id] || [];
+      var hasKids = kids.length > 0;
+      var groupId = 'grp_' + folder.id;
+      var indent = depth * 1.25; // rem per level
+
+      if (depth === 0) {
+        // Top-level: full card style
+        html += '<div class="tree-group">';
+        html += '<div class="tree-parent' + (sel ? ' selected' : '') + (hasKids ? ' has-children' : '') + '"' +
+          ' data-id="' + folder.id + '" data-group="' + groupId + '" data-children="' + hasKids + '"' +
+          ' onclick="handleParentClickEl(this)">';
+        html += '<div class="folder-checkbox" data-folderid="' + folder.id + '" onclick="event.stopPropagation();toggleFolderEl(this)" title="Auswählen">' + (sel ? '✓' : '') + '</div>';
+        html += '<span class="folder-icon">' + fi.icon + '</span>';
+        html += '<div class="folder-info">';
+        html += '<div class="folder-name-full">' + escHtml(name) + '</div>';
+        html += '<div class="folder-count">' + folder.totalItemCount + ' Mails' + (hasKids ? ' · ' + kids.length + ' Unterordner' : '') + '</div>';
+        html += '</div>';
+        if (hasKids) html += '<span class="tree-toggle" id="toggle_' + folder.id + '">▶</span>';
+        html += '</div>';
+      } else {
+        // Sub-level: indented row
+        html += '<div class="tree-group" style="margin-left:' + indent + 'rem;margin-bottom:.25rem">';
+        html += '<div class="tree-child' + (sel ? ' selected' : '') + (hasKids ? ' has-children' : '') + '"' +
+          ' data-id="' + folder.id + '" data-group="' + groupId + '" data-children="' + hasKids + '"' +
+          ' onclick="handleParentClickEl(this)">';
+        html += '<div class="folder-checkbox" data-folderid="' + folder.id + '" onclick="event.stopPropagation();toggleFolderEl(this)" title="Auswählen">' + (sel ? '✓' : '') + '</div>';
+        html += '<span class="folder-icon" style="font-size:.8rem">' + fi.icon + '</span>';
+        html += '<div class="folder-info">';
+        html += '<div class="folder-name-full" style="font-size:.78rem">' + escHtml(name) + '</div>';
+        html += '<div class="folder-count">' + folder.totalItemCount + ' Mails' + (hasKids ? ' · ' + kids.length + ' Unterordner' : '') + '</div>';
+        html += '</div>';
+        if (hasKids) html += '<span class="tree-toggle" id="toggle_' + folder.id + '">▶</span>';
+        html += '</div>';
+      }
+
+      // Recursively render children (hidden by default)
+      if (hasKids) {
+        html += '<div class="tree-children" id="' + groupId + '">';
+        html += renderLevel(folder.id, depth + 1);
+        html += '</div>';
+      }
+      html += '</div>';
+    });
+    return html;
+  }
+
+  grid.innerHTML = renderLevel('__root__', 0);
+  updateStats();
+}
+
+function handleParentClickEl(el) {
+  var folderId = el.getAttribute('data-id');
+  var groupId = el.getAttribute('data-group');
+  var hasChildren = el.getAttribute('data-children') === 'true';
+  if (hasChildren) {
+    var ch = document.getElementById(groupId);
+    var tg = document.getElementById('toggle_' + folderId);
+    if (ch && tg) {
+      var isOpen = ch.classList.contains('open');
+      if (isOpen) { ch.classList.remove('open'); tg.classList.remove('open'); }
+      else { ch.classList.add('open'); tg.classList.add('open'); }
+    }
+  } else {
+    toggleFolder(folderId);
+  }
+}
+
+function handleChildClickEl(event, el) {
+  event.stopPropagation();
+  var id = el.getAttribute('data-id');
+  toggleFolder(id);
+}
+
+function toggleFolder(id) { if (selectedFolderIds.has(id)) selectedFolderIds.delete(id); else selectedFolderIds.add(id); renderFolders(); }
+function selectAllFolders(on) {
+  selectedFolderIds = new Set();
+  if (on) allFolders.forEach(function(f){ selectedFolderIds.add(f.id); });
+  renderFolders();
+  if (on) {
+    document.querySelectorAll('.tree-children').forEach(function(el){ el.classList.add('open'); });
+    document.querySelectorAll('.tree-toggle').forEach(function(el){ el.classList.add('open'); });
+  }
+}
+
+async function loadSelectedFolders() {
+  if (!selectedFolderIds.size) { log('Bitte mindestens einen Ordner waehlen.', 'warn'); return; }
+  var btn = document.getElementById('btnLoadMails');
+  btn.classList.add('spinning'); btn.disabled = true;
+  var ageDays = parseInt(document.getElementById('ageDays').value);
+  var cutoff = new Date(); cutoff.setDate(cutoff.getDate() - ageDays);
+  var batch = parseInt(document.getElementById('batchSize').value);
+  allMails = [];
+  for (var id of selectedFolderIds) {
+    try {
+      var folder = allFolders.find(function(f){ return f.id === id; });
+      var fname = folder ? (FOLDER_NAMES_DE[folder.wellKnownName] || folder.displayName) : 'Unbekannt';
+      var pageSize = batch === 0 ? 500 : batch;
+      var filterParam = ageDays === 0 ? '' : '&$filter=receivedDateTime lt ' + cutoff.toISOString();
+      var nextUrl = 'https://graph.microsoft.com/v1.0/me/mailFolders/' + id + '/messages?$top=' + pageSize + '&$orderby=receivedDateTime asc' + filterParam + '&$select=id,subject,from,receivedDateTime,hasAttachments,bodyPreview';
+      var mails = [], pageNum = 0;
+      // Check if we have a saved nextLink for this folder (pagination)
+      if (pageNextLinks[id]) {
+        nextUrl = pageNextLinks[id];
+        log(fname + ': Lade nächste Seite...', 'info');
+      }
+      while (nextUrl) {
+        var data = await apiGet(mailToken, nextUrl);
+        var page = data.value || [];
+        mails = mails.concat(page);
+        pageNum++;
+        log(fname + ': Seite ' + pageNum + ' — ' + mails.length + ' Mails geladen...', 'info');
+        if (batch === 0) {
+          nextUrl = data['@odata.nextLink'] || null;
+        } else {
+          pageNextLinks[id] = data['@odata.nextLink'] || null;
+          localStorage.setItem('kma_page_links', JSON.stringify(pageNextLinks));
+          nextUrl = null;
+        }
+      }
+      var skipped = 0;
+      mails.forEach(function(m){ m._folderName = fname; m._alreadyArchived = archivedJournal.has(m.id); if (m._alreadyArchived) skipped++; });
+      allMails = allMails.concat(mails);
+      log(fname + ': ' + mails.length + ' Mails gesamt' + (skipped > 0 ? ' — ' + skipped + ' im Journal, werden übersprungen' : '') + '.', skipped > 0 ? 'warn' : 'success');
+      if (skipped === mails.length && mails.length > 0) {
+        log('Alle ' + mails.length + ' Mails aus "' + fname + '" bereits archiviert — lade nächste Seite...', 'info');
+      }
+    } catch(e) { log('Fehler bei Ordner: ' + e.message, 'error'); }
+  }
+  totalMailsFound = allMails.length;
+  // Compute total mails across all selected folders for global progress bar
+  totalMailsInFolders = 0;
+  selectedFolderIds.forEach(function(id) {
+    var f = allFolders.find(function(f){ return f.id === id; });
+    if (f) totalMailsInFolders += (f.totalItemCount || 0);
+  });
+  var hasMorePages = Object.values(pageNextLinks).some(function(v){ return !!v; });
+  var allAlreadyArchived = allMails.length > 0 && allMails.every(function(m){ return m._alreadyArchived; });
+
+  if (allAlreadyArchived && hasMorePages) {
+    // All mails on this page already archived — auto-skip to next page
+    log('Alle ' + allMails.length + ' Mails auf dieser Seite bereits archiviert — überspringe zur nächsten Seite...', 'warn');
+    btn.classList.remove('spinning'); btn.disabled = false;
+    await loadSelectedFolders(); // Recursive call loads next page
+    return;
+  }
+
+  // Filter out already archived mails from display
+  var pendingMails = allMails.filter(function(m){ return !m._alreadyArchived; });
+  log('Gesamt: ' + allMails.length + ' Mails geladen' +
+    (pendingMails.length < allMails.length ? ' (' + (allMails.length - pendingMails.length) + ' bereits archiviert, übersprungen)' : '') +
+    (hasMorePages ? ' · weitere Seiten verfügbar' : '') + '.', 'info');
+
+  renderMails(allMails);
+  updatePaginationUI(hasMorePages);
+  btn.classList.remove('spinning'); btn.disabled = false;
+}
+
+// ── Archive ────────────────────────────────────────────────────────────────
+function updatePaginationUI(hasMore) {
+  var indicator = document.getElementById('pageIndicator');
+  var btnNext = document.getElementById('btnNextPage');
+  var btnReset = document.getElementById('btnResetPage');
+  var totalPages = Object.keys(pageNextLinks).length;
+  if (totalMailsFound > 0) {
+    indicator.style.display = '';
+    indicator.textContent = allMails.length + ' Mails geladen';
+  }
+  if (hasMore) {
+    btnNext.style.display = '';
+    btnReset.style.display = '';
+    indicator.textContent += ' · weitere verfügbar';
+  } else {
+    btnNext.style.display = 'none';
+  }
+}
+
+async function loadNextPage() {
+  var hasMore = Object.values(pageNextLinks).some(function(v){ return !!v; });
+  if (!hasMore) { log('Keine weiteren Seiten.', 'warn'); return; }
+  await loadSelectedFolders();
+}
+
+function closeResetBanner() {
+  var b = document.getElementById('resetJournalBanner');
+  if (b) b.remove();
+}
+
+function confirmResetJournal() {
+  var count = archivedJournal.size;
+  if (count === 0) { log('Journal ist bereits leer.', 'warn'); return; }
+  // Show inline confirm banner
+  var existing = document.getElementById('resetJournalBanner');
+  if (existing) { existing.remove(); return; }
+  var banner = document.createElement('div');
+  banner.id = 'resetJournalBanner';
+  banner.style.cssText = 'background:rgba(248,113,113,.1);border:1px solid rgba(248,113,113,.4);border-radius:12px;padding:1rem 1.25rem;margin-bottom:1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap';
+  banner.innerHTML =
+    '<div style="font-family:var(--mono);font-size:.78rem">' +
+      '<span style="color:var(--danger);font-weight:700">⚠ Journal zurücksetzen?</span><br>' +
+      '<span style="color:var(--muted)">' + count + ' Einträge werden gelöscht — alle Mails werden erneut archiviert</span>' +
+    '</div>' +
+    '<div style="display:flex;gap:.5rem;flex-shrink:0">' +
+      '<button class="btn btn-danger btn-sm" onclick="resetJournal()">🗑 Ja, zurücksetzen</button>' +
+      '<button class="btn btn-ghost btn-sm" onclick="closeResetBanner()">Abbrechen</button>' +
+    '</div>';
+  var ref = document.getElementById('btnResetJournal');
+  ref.parentNode.parentNode.insertBefore(banner, ref.parentNode.parentNode.firstChild);
+}
+
+function resetJournal() {
+  archivedJournal = new Set();
+  archivedCount = 0;
+  localStorage.removeItem('mv_journal');
+  localStorage.setItem('mv_archived', '0');
+  localStorage.removeItem('kma_session_folder');
+  localStorage.removeItem('kma_session_root');
+  localStorage.removeItem('kma_page_links');
+  currentSessionFolder = null;
+  pageNextLinks = {};
+  var banner = document.getElementById('resetJournalBanner');
+  if (banner) banner.remove();
+  var resumeBanner = document.getElementById('resumeBanner');
+  if (resumeBanner) resumeBanner.remove();
+  updateStats();
+  saveSettingsToOneDrive();
+  log('Journal zurückgesetzt — alle Mails werden beim nächsten Durchlauf erneut archiviert.', 'warn');
+  // Reload folder counts
+  if (allFolders.length > 0) renderFolders();
+}
+
+function resetPagination() {
+  pageNextLinks = {};
+  allMails = [];
+  currentSessionFolder = null;
+  localStorage.removeItem('kma_session_folder');
+  localStorage.removeItem('kma_session_root');
+  localStorage.removeItem('kma_page_links');
+  document.getElementById('btnNextPage').style.display = 'none';
+  document.getElementById('btnResetPage').style.display = 'none';
+  document.getElementById('pageIndicator').style.display = 'none';
+  log('Paginierung zurückgesetzt — neuer Archivierungs-Ordner wird beim nächsten Start erstellt.', 'warn');
+  loadSelectedFolders();
+}
+
+function cancelArchiving() {
+  archiveCancelled = true;
+  document.getElementById('btnCancel').style.display = 'none';
+  log('Archivierung wird abgebrochen...', 'warn');
+}
+
+async function startArchiving() {
+  if (!mailToken || !driveToken) { log('Bitte beide Konten verbinden.', 'error'); return; }
+  if (!allMails.length) { log('Keine Mails geladen.', 'warn'); return; }
+  archiveCancelled = false;
+  document.getElementById('progressBar').style.background = 'linear-gradient(90deg,var(--accent),var(--accent2))';
+  var btn = document.getElementById('btnArchive');
+  btn.classList.add('spinning'); btn.disabled = true;
+  document.getElementById('btnCancel').style.display = '';
+  // Auto-sync journal from OneDrive before starting to prevent duplicates
+  if (driveToken) {
+    setSyncStatus('running', 'Wird synchronisiert...', null);
+    log('Journal wird aus OneDrive synchronisiert...', 'info');
+    await loadSettingsFromOneDrive();
+    log('Journal synchronisiert — ' + archivedJournal.size + ' bereits archivierte Mails bekannt.', 'success');
+  }
+  var progressWrap = document.getElementById('progressWrap');
+  var progressBar = document.getElementById('progressBar');
+  progressWrap.style.display = 'block';
+  document.getElementById('progressDone').textContent = '0';
+  document.getElementById('progressSkipped').textContent = '0';
+  document.getElementById('progressErrors').textContent = '0';
+  document.getElementById('progressTotal').textContent = total;
+  document.getElementById('progressPercent').textContent = '0%';
+  document.getElementById('progressLabel').textContent = 'Archivierung läuft...';
+  document.getElementById('progressCurrent').textContent = '—';
+  // Init global progress
+  var gDoneEl = document.getElementById('globalDone');
+  var gTotalEl = document.getElementById('globalTotal');
+  var gBarEl = document.getElementById('globalBar');
+  var gPctEl = document.getElementById('globalPercent');
+  if (gDoneEl) gDoneEl.textContent = archivedJournal.size;
+  if (gTotalEl) gTotalEl.textContent = totalMailsInFolders > 0 ? totalMailsInFolders : '...';
+  if (gBarEl && totalMailsInFolders > 0) {
+    var initPct = Math.min(100, Math.round((archivedJournal.size / totalMailsInFolders) * 100));
+    gBarEl.style.width = initPct + '%';
+    if (gPctEl) gPctEl.textContent = initPct + '% archiviert';
+  }
+  var rootFolder = document.getElementById('folderName').value.trim() || 'MailArchiv';
+  // Create timestamp ONCE for entire session — reuse if already set
+  if (!currentSessionFolder) {
+    // Check localStorage first — survives page reload
+    var savedSession = localStorage.getItem('kma_session_folder');
+    var savedSessionRoot = localStorage.getItem('kma_session_root');
+    if (savedSession && savedSessionRoot === rootFolder) {
+      currentSessionFolder = savedSession;
+      log('Sitzung wiederhergestellt: ' + currentSessionFolder, 'success');
+    } else {
+      var now = new Date();
+      var ts = now.getFullYear() + '-' +
+        String(now.getMonth()+1).padStart(2,'0') + '-' +
+        String(now.getDate()).padStart(2,'0') + '_' +
+        String(now.getHours()).padStart(2,'0') + '-' +
+        String(now.getMinutes()).padStart(2,'0');
+      currentSessionFolder = rootFolder + '/' + ts;
+      localStorage.setItem('kma_session_folder', currentSessionFolder);
+      localStorage.setItem('kma_session_root', rootFolder);
+      log('Neuer Archivierungs-Ordner: ' + currentSessionFolder, 'info');
+    }
+  } else {
+    log('Verwende bestehenden Ordner: ' + currentSessionFolder, 'info');
+  }
+  var baseFolder = currentSessionFolder;
+  log('Archivierung gestartet -> OneDrive/' + baseFolder, 'info');
+  try { await ensureDriveFolder(driveToken, baseFolder); }
+  catch(e) { log('Fehler beim Erstellen des Zielordners: ' + e.message, 'error'); btn.classList.remove('spinning'); btn.disabled = false; document.getElementById('btnCancel').style.display = 'none'; return; }
+  var done = 0, total = allMails.length;
+  for (var i = 0; i < allMails.length; i++) {
+    var mail = allMails[i];
+    if (archiveCancelled) {
+      log('Abgebrochen bei Mail ' + (i+1) + ' von ' + total + '.', 'warn');
+      break;
+    }
+    // Update current mail indicator
+    var pct = Math.round((i / total) * 100);
+    progressBar.style.width = pct + '%';
+    document.getElementById('progressPercent').textContent = pct + '%';
+    document.getElementById('progressCurrent').textContent = (mail.subject || '(kein Betreff)').slice(0, 60);
+    // Skip if already in journal
+    if (mail._alreadyArchived) {
+      var skCnt = parseInt(document.getElementById('progressSkipped').textContent||'0') + 1;
+      document.getElementById('progressSkipped').textContent = skCnt;
+      var elS = document.getElementById('mail-' + mail.id);
+      if (elS) { var tagS = elS.querySelector('.mail-tag'); if (tagS) { tagS.textContent = 'bereits archiviert'; tagS.className = 'mail-tag tag-archived'; } }
+      continue;
+    }
+    try {
+      // Refresh tokens if needed before each mail
+      if (i > 0 && i % 50 === 0) {
+        await refreshMailToken();
+        await refreshDriveToken();
+      }
+      var subFolder = baseFolder + (mail._folderName ? '/' + sanitizeFolderName(mail._folderName) : '');
+      await ensureDriveFolder(driveToken, subFolder);
+      var dateStr2 = new Date(mail.receivedDateTime).toISOString().slice(0,10);
+      var subj2 = sanitizeFileName(mail.subject || 'kein-betreff');
+      var mailIdShort2 = mail.id ? mail.id.slice(-8) : '';
+      var fname2 = dateStr2 + '_' + subj2 + (mailIdShort2 ? '_' + mailIdShort2 : '') + '.eml'; // base filename for duplicate check
+      // Find unique filename — add counter if file already exists
+      var uniqueName = await getUniqueFilename(driveToken, subFolder, fname2);
+      await archiveSingleMail(mail, subFolder, uniqueName);
+      archivedJournal.add(mail.id);
+      localStorage.setItem('mv_journal', JSON.stringify(Array.from(archivedJournal)));
+      done++; archivedCount++; globalArchivedCount++;
+      var donePct = Math.round(((i+1) / total) * 100);
+      progressBar.style.width = donePct + '%';
+      document.getElementById('progressPercent').textContent = donePct + '%';
+      document.getElementById('progressDone').textContent = done;
+      document.getElementById('progressLabel').textContent = 'Seite ' + done + ' / ' + total;
+      // Update global progress
+      var globalDoneEl = document.getElementById('globalDone');
+      var globalTotalEl = document.getElementById('globalTotal');
+      var globalBarEl = document.getElementById('globalBar');
+      var globalPctEl = document.getElementById('globalPercent');
+      if (globalDoneEl) globalDoneEl.textContent = archivedJournal.size;
+      if (globalTotalEl && totalMailsInFolders > 0) globalTotalEl.textContent = totalMailsInFolders;
+      if (globalBarEl && totalMailsInFolders > 0) {
+        var gPct = Math.min(100, Math.round((archivedJournal.size / totalMailsInFolders) * 100));
+        globalBarEl.style.width = gPct + '%';
+        if (globalPctEl) globalPctEl.textContent = gPct + '% archiviert';
+      }
+      log('✓ [' + mail._folderName + '] ' + (mail.subject || '(kein Betreff)'), 'success');
+      var el = document.getElementById('mail-' + mail.id);
+      if (el) { var tag = el.querySelector('.mail-tag'); if (tag) { tag.textContent = 'archiviert'; tag.className = 'mail-tag tag-archived'; } }
+    } catch(e) {
+      var errCount = parseInt(document.getElementById('progressErrors').textContent) + 1;
+      document.getElementById('progressErrors').textContent = errCount;
+      log('✗ "' + (mail.subject || '') + '": ' + e.message, 'error');
+    }
+  }
+  localStorage.setItem('mv_archived', archivedCount);
+  document.getElementById('statTotal').textContent = archivedCount;
+  document.getElementById('statLast').textContent = new Date().toLocaleTimeString('de-DE');
+    document.getElementById('btnCancel').style.display = 'none';
+  progressBar.style.width = '100%';
+  document.getElementById('progressPercent').textContent = '100%';
+  if (archiveCancelled) {
+    document.getElementById('progressLabel').textContent = 'Abgebrochen: ' + done + '/' + total;
+    progressBar.style.background = 'var(--warn)';
+    log('Abgebrochen: ' + done + '/' + total + ' Mails archiviert.', 'warn');
+    currentSessionFolder = null;
+  } else {
+    document.getElementById('progressLabel').textContent = '✓ ' + done + ' archiviert · ' + (document.getElementById('progressSkipped').textContent||'0') + ' übersprungen · ' + (document.getElementById('progressErrors').textContent||'0') + ' Fehler';
+    progressBar.style.background = 'linear-gradient(90deg,var(--accent),var(--accent2))';
+    log('Seite fertig: ' + done + '/' + total + ' Mails archiviert.', 'success');
+  }
+  await saveSettingsToOneDrive();
+  // Keep progress visible — hide only when next run starts
+  btn.classList.remove('spinning'); btn.disabled = false;
+  allMails = [];
+  // Auto-continue: check if more pages available
+  var hasMorePages = Object.values(pageNextLinks).some(function(v){ return !!v; });
+  if (!archiveCancelled && hasMorePages) {
+    log('Weitere Seiten verfügbar — lade automatisch weiter...', 'info');
+    await loadSelectedFolders();
+    // allMails is updated by loadSelectedFolders — check for pending (non-archived) mails
+    var pendingMails = allMails.filter(function(m){ return !m._alreadyArchived; });
+    if (pendingMails.length > 0) {
+      log('Nächste Seite: ' + pendingMails.length + ' ausstehende Mails — starte automatisch...', 'info');
+      await startArchiving();
+    } else if (Object.values(pageNextLinks).some(function(v){ return !!v; })) {
+      log('Seite übersprungen (alle archiviert) — lade weiter...', 'info');
+      await startArchiving(); // Will trigger loadSelectedFolders again
+    } else {
+      log('Alle Mails archiviert — Sitzung abgeschlossen.', 'success');
+      currentSessionFolder = null;
+    }
+  } else if (!archiveCancelled) {
+    log('Alle Mails archiviert — Sitzung abgeschlossen.', 'success');
+    currentSessionFolder = null;
+    pageNextLinks = {};
+    localStorage.removeItem('kma_session_folder');
+    localStorage.removeItem('kma_session_root');
+    localStorage.removeItem('kma_page_links');
+    await saveSettingsToOneDrive();
+    await loadSelectedFolders();
+  }
+}
+
+async function archiveSingleMail(mail, folder, filename) {
+  // Get full mail details for HTML generation
+  var mailDetail = await apiGet(mailToken, 'https://graph.microsoft.com/v1.0/me/messages/' + mail.id + '?$select=subject,from,toRecipients,ccRecipients,receivedDateTime,body,hasAttachments');
+
+  // Build base filename with mail ID suffix for reliable duplicate detection
+  if (!filename) {
+    var dateStr = new Date(mail.receivedDateTime).toISOString().slice(0,10);
+    var mailIdShort = mail.id ? mail.id.slice(-8) : '';
+    filename = dateStr + '_' + sanitizeFileName(mail.subject || 'kein-betreff') + (mailIdShort ? '_' + mailIdShort : '') + '.eml';
+  }
+  var baseName = filename.replace(/\.eml$/i, '');
+
+  // 1. Save .eml (full MIME with attachments)
+  var mimeRes = await fetch('https://graph.microsoft.com/v1.0/me/messages/' + mail.id + '/$value', { headers: { Authorization: 'Bearer ' + mailToken } });
+  if (mimeRes.status === 401) {
+    await refreshMailToken();
+    mimeRes = await fetch('https://graph.microsoft.com/v1.0/me/messages/' + mail.id + '/$value', { headers: { Authorization: 'Bearer ' + mailToken } });
+  }
+  if (!mimeRes.ok) throw new Error('MIME-Abruf fehlgeschlagen (HTTP ' + mimeRes.status + ')');
+  var mimeData = await mimeRes.blob();
+  await apiPut(driveToken, 'https://graph.microsoft.com/v1.0/me/drive/root:/' + encodePath(folder) + '/' + encodeURIComponent(filename) + ':/content', mimeData, 'message/rfc822');
+
+  // 2. Save .html (readable on all devices)
+  if (document.getElementById('saveHtml') && document.getElementById('saveHtml').checked) {
+    var htmlContent = buildMailHtml(mailDetail);
+    var htmlBlob = new Blob([htmlContent], { type: 'text/html;charset=utf-8' });
+    await apiPut(driveToken, 'https://graph.microsoft.com/v1.0/me/drive/root:/' + encodePath(folder) + '/' + encodeURIComponent(baseName + '.html') + ':/content', htmlBlob, 'text/html');
+  }
+
+  // 3. Save attachments separately
+  if ((document.getElementById('saveAttachments') ? document.getElementById('saveAttachments').checked : true) && mail.hasAttachments) {
+    try {
+      // First get list of attachments (without content — avoids 4MB limit)
+      var attList = await apiGet(mailToken, 'https://graph.microsoft.com/v1.0/me/messages/' + mail.id + '/attachments?$select=id,name,contentType,size,isInline');
+      for (var a = 0; a < attList.value.length; a++) {
+        var att = attList.value[a];
+        // Skip inline images (embedded in HTML body)
+        if (att.isInline) continue;
+        if (!att.name) continue;
+        try {
+          // Download each attachment individually by ID
+          var attRes = await fetch('https://graph.microsoft.com/v1.0/me/messages/' + mail.id + '/attachments/' + att.id + '/$value', { headers: { Authorization: 'Bearer ' + mailToken } });
+          if (!attRes.ok) { console.warn('Anhang HTTP ' + attRes.status + ': ' + att.name); continue; }
+          var attBlob = await attRes.blob();
+          var attName = sanitizeFileName(att.name);
+          var attFilename = baseName + '_' + attName;
+          await apiPut(driveToken, 'https://graph.microsoft.com/v1.0/me/drive/root:/' + encodePath(folder) + '/' + encodeURIComponent(attFilename) + ':/content', attBlob, att.contentType || 'application/octet-stream');
+        } catch(ae) {
+          console.warn('Anhang fehlgeschlagen: ' + att.name + ' — ' + ae.message);
+        }
+      }
+    } catch(e) {
+      console.warn('Anhangliste konnte nicht abgerufen werden:', e.message);
+    }
+  }
+
+  // 4. Delete from mailbox if option is checked
+  if (document.getElementById('deleteAfterArchive').checked) {
+    await apiDelete(mailToken, 'https://graph.microsoft.com/v1.0/me/messages/' + mail.id);
+  }
+}
+
+function buildMailHtml(mail) {
+  var from = mail.from && mail.from.emailAddress ? (mail.from.emailAddress.name || '') + ' &lt;' + (mail.from.emailAddress.address || '') + '&gt;' : '—';
+  var to = (mail.toRecipients || []).map(function(r){ return (r.emailAddress.name || '') + ' &lt;' + r.emailAddress.address + '&gt;'; }).join(', ') || '—';
+  var cc = (mail.ccRecipients || []).map(function(r){ return (r.emailAddress.name || '') + ' &lt;' + r.emailAddress.address + '&gt;'; }).join(', ');
+  var date = new Date(mail.receivedDateTime).toLocaleString('de-DE');
+  var subject = mail.subject || '(kein Betreff)';
+  var body = mail.body ? (mail.body.contentType === 'html' ? mail.body.content : '<pre>' + escHtml(mail.body.content) + '</pre>') : '';
+  var attachNote = mail.hasAttachments ? '<div style="background:#fff3cd;border:1px solid #ffc107;border-radius:6px;padding:8px 12px;margin-bottom:16px;font-size:13px">📎 Diese Mail enthält Anhänge. Öffne die .eml-Datei für vollständigen Zugriff auf alle Anhänge.</div>' : '';
+  return '<!DOCTYPE html><html lang="de"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>' + escHtml(subject) + '</title>' +
+    '<style>body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;max-width:800px;margin:0 auto;padding:20px;background:#f5f5f5;color:#333}' +
+    '.header{background:white;border-radius:10px;padding:20px;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,.1)}' +
+    '.header h1{font-size:18px;margin:0 0 16px;color:#1a1a2e;line-height:1.4}' +
+    '.meta{display:grid;grid-template-columns:80px 1fr;gap:6px 12px;font-size:13px}' +
+    '.meta-label{color:#666;font-weight:600}' +
+    '.meta-value{color:#333;word-break:break-word}' +
+    '.body{background:white;border-radius:10px;padding:20px;box-shadow:0 1px 3px rgba(0,0,0,.1)}' +
+    '.kma-badge{text-align:center;margin-top:20px;font-size:11px;color:#999}' +
+    '</style></head><body>' +
+    '<div class="header">' +
+    '<h1>' + escHtml(subject) + '</h1>' +
+    attachNote +
+    '<div class="meta">' +
+    '<span class="meta-label">Von</span><span class="meta-value">' + from + '</span>' +
+    '<span class="meta-label">An</span><span class="meta-value">' + to + '</span>' +
+    (cc ? '<span class="meta-label">CC</span><span class="meta-value">' + cc + '</span>' : '') +
+    '<span class="meta-label">Datum</span><span class="meta-value">' + date + '</span>' +
+    '</div></div>' +
+    '<div class="body">' + body + '</div>' +
+    '<div class="kma-badge">Archiviert mit KMA — Käppler Mail Archiv</div>' +
+    '</body></html>';
+}
+
+async function getUniqueFilename(token, folder, filename) {
+  var base = filename.replace(/\.eml$/i, '');
+  var name = filename;
+  var counter = 1;
+  while (true) {
+    try {
+      await apiGet(token, 'https://graph.microsoft.com/v1.0/me/drive/root:/' + encodePath(folder) + '/' + encodeURIComponent(name));
+      // File exists — try next counter
+      counter++;
+      name = base + '_' + counter + '.eml';
+    } catch(e) {
+      // File does not exist — use this name
+      return name;
+    }
+  }
+}
+
+function sanitizeFolderName(name) {
+  if (!name) return 'Archiv';
+  var result = '';
+  var illegal = ['\\', '/', ':', '*', '?', '"', '<', '>', '|'];
+  for (var i = 0; i < name.length; i++) {
+    var c = name[i];
+    var code = name.charCodeAt(i);
+    if (code >= 0 && code <= 31) continue;
+    if (illegal.indexOf(c) >= 0) result += '-';
+    else result += c;
+  }
+  result = result.trim();
+  while (result.length > 0 && result[result.length-1] === '.') result = result.slice(0,-1);
+  return result.slice(0, 255) || 'Archiv';
+}
+
+function sanitizeFileName(name) {
+  if (!name) return 'kein-betreff';
+  var result = '';
+  var illegal = ['\\', '/', ':', '*', '?', '"', '<', '>', '|'];
+  for (var i = 0; i < name.length; i++) {
+    var c = name[i];
+    var code = name.charCodeAt(i);
+    if (code >= 0 && code <= 31) continue;
+    if (illegal.indexOf(c) >= 0) result += '-';
+    else result += c;
+  }
+  return result.trim().slice(0, 60) || 'kein-betreff';
+}
+
+async function ensureDriveFolder(token, path) {
+  // Build folder step by step
+  var parts = path.split('/').map(function(p){ return sanitizeFolderName(p); });
+  var current = '';
+  for (var i = 0; i < parts.length; i++) {
+    var folderName = parts[i];
+    var fullPath = current ? (current + '/' + folderName) : folderName;
+    var exists = false;
+    try {
+      await apiGet(token, 'https://graph.microsoft.com/v1.0/me/drive/root:/' + encodePath(fullPath));
+      exists = true;
+    } catch(e) { exists = false; }
+    if (!exists) {
+      // Use item ID of parent for reliable folder creation
+      var parentUrl;
+      if (current) {
+        try {
+          var parentItem = await apiGet(token, 'https://graph.microsoft.com/v1.0/me/drive/root:/' + encodePath(current));
+          parentUrl = 'https://graph.microsoft.com/v1.0/me/drive/items/' + parentItem.id + '/children';
+        } catch(e) {
+          parentUrl = 'https://graph.microsoft.com/v1.0/me/drive/root/children';
+        }
+      } else {
+        parentUrl = 'https://graph.microsoft.com/v1.0/me/drive/root/children';
+      }
+      await apiPost(token, parentUrl, { name: folderName, folder: {}, '@microsoft.graph.conflictBehavior': 'rename' });
+    }
+    current = fullPath;
+  }
+}
+
+function encodePath(path) {
+  // Encode each segment separately, preserving slashes
+  return path.split('/').map(function(seg) {
+    return encodeURIComponent(seg);
+  }).join('/');
+}
+
+// ── Auto Archive ───────────────────────────────────────────────────────────
+function setupAutoArchive() {
+  if (autoTimer) clearInterval(autoTimer);
+  var mins = parseInt(document.getElementById('autoInterval').value);
+  if (!mins) return;
+  autoTimer = setInterval(function(){ log('Auto-Archivierung...','info'); startArchiving(); }, mins * 60 * 1000);
+  log('Auto-Archivierung: alle ' + mins + ' Min.', 'success');
+}
+
+// ── OneDrive Browser ───────────────────────────────────────────────────────
+async function openFolderBrowser() {
+  if (!driveToken) { log('OneDrive zuerst verbinden.', 'warn'); return; }
+  driveBrowserPath = ''; selectedDrivePath = '';
+  document.getElementById('browserModal').classList.add('open');
+  await browseDrivePath('');
+}
+
+async function browseDrivePath(path) {
+  driveBrowserPath = path;
+  document.getElementById('driveBreadcrumb').textContent = '/ ' + (path || '(Stammverzeichnis)');
+  var browser = document.getElementById('driveBrowser');
+  browser.innerHTML = '<div class="empty-state">Wird geladen...</div>';
+  try {
+    var url = path ? 'https://graph.microsoft.com/v1.0/me/drive/root:/' + path + '/children' : 'https://graph.microsoft.com/v1.0/me/drive/root/children';
+    var data = await apiGet(driveToken, url + '?$filter=folder ne null&$orderby=name asc');
+    var items = data.value || [];
+    var html = '';
+    if (path) { var parent = path.includes('/') ? path.substring(0, path.lastIndexOf('/')) : ''; html += '<div class="drive-item drive-up" onclick="browseDrivePath(\'' + escAttr(parent) + '\')">⬆ ..</div>'; }
+    html += items.map(function(item) {
+      var itemPath = path ? (path + '/' + item.name) : item.name;
+      return '<div class="drive-item' + (itemPath === selectedDrivePath ? ' drive-selected' : '') + '" onclick="selectDriveItem(\'' + escAttr(itemPath) + '\')">📁 ' + escHtml(item.name) + '</div>';
+    }).join('');
+    browser.innerHTML = html || '<div class="empty-state">Keine Unterordner</div>';
+  } catch(e) { browser.innerHTML = '<div class="empty-state" style="color:var(--danger)">Fehler: ' + escHtml(e.message) + '</div>'; }
+}
+
+function selectDriveItem(path) { selectedDrivePath = path; browseDrivePath(path); }
+
+async function createDriveFolder() {
+  var name = document.getElementById('newFolderName').value.trim();
+  if (!name) return;
+  try {
+    var parentPath = driveBrowserPath;
+    var parentUrl = parentPath ? 'https://graph.microsoft.com/v1.0/me/drive/root:/' + parentPath + '/children' : 'https://graph.microsoft.com/v1.0/me/drive/root/children';
+    await apiPost(driveToken, parentUrl, { name: name, folder: {}, '@microsoft.graph.conflictBehavior': 'rename' });
+    selectedDrivePath = parentPath ? (parentPath + '/' + name) : name;
+    document.getElementById('newFolderName').value = '';
+    await browseDrivePath(driveBrowserPath);
+    log('Ordner erstellt: ' + selectedDrivePath, 'success');
+  } catch(e) { log('Fehler: ' + e.message, 'error'); }
+}
+
+function confirmFolderSelection() {
+  var path = selectedDrivePath || driveBrowserPath || 'MailArchiv';
+  document.getElementById('folderName').value = path;
+  document.getElementById('statFolder').textContent = path;
+  document.getElementById('browserModal').classList.remove('open');
+  log('Zielordner: ' + path, 'success');
+}
+
+// ── Render ─────────────────────────────────────────────────────────────────
+function renderMails(mails) {
+  var list = document.getElementById('mailList');
+  if (!mails || !mails.length) { list.innerHTML = '<div class="empty-state">' + (mailToken ? 'Keine archivierbaren Mails. Ordner waehlen und laden.' : 'Beide Konten verbinden, Diagnose starten, dann Ordner waehlen.') + '</div>'; return; }
+  list.innerHTML = mails.map(function(m) {
+    var from = m.from && m.from.emailAddress ? (m.from.emailAddress.name || m.from.emailAddress.address) : '—';
+    var date = new Date(m.receivedDateTime).toLocaleDateString('de-DE');
+    var subj = m.subject || '(kein Betreff)';
+    return '<div class="mail-item" id="mail-' + m.id + '">' +
+      '<div class="mail-from">' + escHtml(from) + '</div>' +
+      '<div class="mail-subject">' + escHtml(subj) + ' <span style="opacity:.4;font-size:.68rem">[' + escHtml(m._folderName || '') + ']</span></div>' +
+      '<div class="mail-date">' + date + '</div>' +
+      '<div class="mail-tag ' + (m._alreadyArchived ? 'tag-archived' : 'tag-pending') + '">' + (m._alreadyArchived ? 'archiviert' : 'ausstehend') + '</div>' +
+      '</div>';
+  }).join('');
+}
+
+function filterMails() {
+  var q = document.getElementById('searchInput').value.toLowerCase();
+  renderMails(allMails.filter(function(m) {
+    var from = m.from && m.from.emailAddress ? (m.from.emailAddress.name || '') + (m.from.emailAddress.address || '') : '';
+    return from.toLowerCase().includes(q) || (m.subject || '').toLowerCase().includes(q) || (m._folderName || '').toLowerCase().includes(q);
+  }));
+}
+
+// ── Utils ──────────────────────────────────────────────────────────────────
+function updateStats() {
+  document.getElementById('statTotal').textContent = archivedCount || '0';
+  document.getElementById('statFolders').textContent = selectedFolderIds.size || '—';
+  document.getElementById('statFolder').textContent = currentSessionFolder || document.getElementById('folderName').value || 'MailArchiv';
+  document.getElementById('statJournal').textContent = archivedJournal.size || '0';
+}
+
+function clearJournal() {
+  if (!confirm('Journal leeren? Mails koennten dann erneut archiviert werden.')) return;
+  archivedJournal = new Set();
+  localStorage.removeItem('mv_journal');
+  updateStats();
+  log('Archiv-Journal geleert.', 'warn');
+}
+
+function log(msg, type) {
+  var body = document.getElementById('logBody');
+  var line = document.createElement('div');
+  line.className = 'log-line';
+  line.innerHTML = '<span class="log-time">' + new Date().toLocaleTimeString('de-DE') + '</span><span class="log-msg ' + (type || '') + '">' + escHtml(msg) + '</span>';
+  body.appendChild(line);
+  body.scrollTop = body.scrollHeight;
+  while (body.children.length > 200) body.removeChild(body.firstChild);
+}
+
+function clearLog() { document.getElementById('logBody').innerHTML = ''; }
+function showSetupModal() { document.getElementById('setupModal').classList.add('open'); }
+function escHtml(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function escAttr(s) { return String(s).replace(/'/g,"\\'"); }
+
+// ── Setup Wizard ──────────────────────────────────────────────────────────
+function toggleClientIdPanel() {
+  var body = document.getElementById('clientIdBody');
+  var chevron = document.getElementById('clientIdChevron');
+  var isOpen = body.style.display !== 'none';
+  body.style.display = isOpen ? 'none' : 'block';
+  chevron.style.transform = isOpen ? '' : 'rotate(180deg)';
+}
+
+function syncClientId() {
+  // Single ID syncs to hidden driveClientId field
+  var id = document.getElementById('clientId').value.trim();
+  document.getElementById('driveClientId').value = id;
+  localStorage.setItem('mv_mail_clientid', id);
+  localStorage.setItem('mv_drive_clientid', id);
+}
+
+function autoCollapseClientId() {
+  var id = document.getElementById('clientId').value.trim();
+  if (id) {
+    var body = document.getElementById('clientIdBody');
+    var chevron = document.getElementById('clientIdChevron');
+    var status = document.getElementById('clientIdStatus');
+    body.style.display = 'none';
+    chevron.style.transform = '';
+    status.textContent = '✓ ' + id.slice(0,8) + '...';
+  }
+}
+
+function copyMailIdToDriver() {
+  var mailId = document.getElementById('wizardMailId').value.trim();
+  if (mailId) document.getElementById('wizardDriveId').value = mailId;
+}
+
+function openWizard() {
+  var mailId = localStorage.getItem('mv_mail_clientid') || '';
+  var driveId = localStorage.getItem('mv_drive_clientid') || '';
+  document.getElementById('wizardMailId').value = mailId;
+  document.getElementById('wizardDriveId').value = driveId;
+  document.getElementById('setupWizardModal').classList.add('open');
+}
+
+function setWizardMode(mode) {
+  var manualSection = document.getElementById('wizardManualSection');
+  var fileSection = document.getElementById('wizardFileSection');
+  var btnManual = document.getElementById('wizardModeManual');
+  var btnFile = document.getElementById('wizardModeFile');
+  if (mode === 'manual') {
+    manualSection.style.display = '';
+    fileSection.style.display = 'none';
+    btnManual.style.border = '2px solid var(--accent)';
+    btnManual.style.background = 'rgba(13,148,136,.1)';
+    btnManual.style.color = 'var(--text)';
+    btnFile.style.border = '1px solid var(--border)';
+    btnFile.style.background = 'transparent';
+    btnFile.style.color = 'var(--muted)';
+  } else {
+    manualSection.style.display = 'none';
+    fileSection.style.display = '';
+    btnFile.style.border = '2px solid var(--accent)';
+    btnFile.style.background = 'rgba(13,148,136,.1)';
+    btnFile.style.color = 'var(--text)';
+    btnManual.style.border = '1px solid var(--border)';
+    btnManual.style.background = 'transparent';
+    btnManual.style.color = 'var(--muted)';
+  }
+}
+
+function handleFileDrop(event) {
+  event.preventDefault();
+  document.getElementById('fileDropZone').style.borderColor = 'var(--border)';
+  var file = event.dataTransfer.files[0];
+  if (file) loadConfigFile(file);
+}
+
+function handleFileSelect(event) {
+  var file = event.target.files[0];
+  if (file) loadConfigFile(file);
+}
+
+function loadConfigFile(file) {
+  var status = document.getElementById('fileLoadStatus');
+  if (!file.name.endsWith('.json')) {
+    status.style.color = 'var(--danger)';
+    status.textContent = '✗ Nur JSON-Dateien (.json) werden unterstützt';
+    return;
+  }
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      var config = JSON.parse(e.target.result);
+      if (!config.mailClientId && !config.driveClientId) {
+        throw new Error('Keine Client IDs in der Datei gefunden');
+      }
+      if (config.mailClientId) {
+        document.getElementById('wizardMailId').value = config.mailClientId;
+      }
+      if (config.driveClientId) {
+        document.getElementById('wizardDriveId').value = config.driveClientId;
+      } else if (config.mailClientId) {
+        document.getElementById('wizardDriveId').value = config.mailClientId;
+      }
+      status.style.color = 'var(--success)';
+      status.textContent = '✓ Datei geladen: ' + file.name;
+      // Switch to manual view to show loaded values
+      setWizardMode('manual');
+    } catch(e) {
+      status.style.color = 'var(--danger)';
+      status.textContent = '✗ Fehler: ' + e.message;
+    }
+  };
+  reader.readAsText(file);
+}
+
+function downloadConfigTemplate() {
+  var mailId = document.getElementById('wizardMailId').value || 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx';
+  var driveId = document.getElementById('wizardDriveId').value || mailId;
+  var config = {
+    mailClientId: mailId,
+    driveClientId: driveId,
+    description: 'KMA — Käppler Mail Archiv Konfiguration',
+    createdAt: new Date().toISOString()
+  };
+  var blob = new Blob([JSON.stringify(config, null, 2)], { type: 'application/json' });
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'kma-config.json';
+  a.click();
+  setTimeout(function(){ URL.revokeObjectURL(a.href); }, 3000);
+}
+
+function saveWizardIds() {
+  var mailId = document.getElementById('wizardMailId').value.trim();
+  var driveId = document.getElementById('wizardDriveId').value.trim();
+  if (!mailId) {
+    document.getElementById('wizardMailId').style.borderColor = 'var(--danger)';
+    document.getElementById('wizardMailId').focus();
+    return;
+  }
+  if (!driveId) driveId = mailId;
+  // Save to localStorage and main fields
+  localStorage.setItem('mv_mail_clientid', mailId);
+  localStorage.setItem('mv_drive_clientid', driveId);
+  document.getElementById('clientId').value = mailId;
+  document.getElementById('driveClientId').value = driveId;
+  var status = document.getElementById('clientIdStatus');
+  if (status) status.textContent = '✓ ' + mailId.slice(0,8) + '...';
+  document.getElementById('mailIdSaved').textContent = '✓ gespeichert';
+  document.getElementById('driveIdSaved').textContent = '✓ gespeichert';
+  document.getElementById('setupWizardModal').classList.remove('open');
+  autoCollapseClientId();
+  log('Client ID gespeichert — Jetzt verbinden!', 'success');
+}
+
+function skipWizard() {
+  document.getElementById('setupWizardModal').classList.remove('open');
+}
+
+// ── Init ───────────────────────────────────────────────────────────────────
+(function init() {
+  // Restore session state from localStorage
+  var savedSession = localStorage.getItem('kma_session_folder');
+  var savedPageLinks = localStorage.getItem('kma_page_links');
+  if (savedSession) {
+    currentSessionFolder = savedSession;
+    log('Offene Sitzung gefunden: ' + savedSession, 'warn');
+    // Delay to ensure DOM is ready
+    setTimeout(function(){ showResumeDialog(savedSession); }, 50);
+  }
+  if (savedPageLinks) {
+    try { pageNextLinks = JSON.parse(savedPageLinks); } catch(e) {}
+  }
+  var savedMailId = localStorage.getItem('mv_mail_clientid');
+  var savedDriveId = localStorage.getItem('mv_drive_clientid');
+  if (savedMailId) { document.getElementById('clientId').value = savedMailId; document.getElementById('mailIdSaved').textContent = '✓ gespeichert'; }
+  if (savedDriveId) { document.getElementById('driveClientId').value = savedDriveId; document.getElementById('driveIdSaved').textContent = '✓ gespeichert'; }
+  if (savedMailId || savedDriveId) {
+    log('Client ID aus lokalem Speicher geladen.', 'success');
+    // Auto-collapse since ID is already set
+    setTimeout(autoCollapseClientId, 100);
+  } else {
+    // First run — show client ID panel open + wizard
+    document.getElementById('clientIdBody').style.display = 'block';
+    document.getElementById('clientIdChevron').style.transform = 'rotate(180deg)';
+    openWizard();
+  }
+  updateStats();
+})();
+</script>
+</body>
+</html>
